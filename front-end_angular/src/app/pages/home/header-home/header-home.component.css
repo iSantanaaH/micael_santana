@@ -1,5 +1,6 @@
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .nav-bar {
@@ -18,19 +19,6 @@ a {
   gap: 0.8rem;
 }
 
-.item input {
-  border-radius: 0.5rem;
-  border: none;
-  padding: 0.5rem;
-  font-size: 0.9rem;
-  width: 20rem;
-}
-
-.item input:focus {
-  outline: none;
-  border: 0.1rem solid var(--aeroBlue);
-}
-
 .container-auth,
 .container-search {
   display: flex;
@@ -39,6 +27,7 @@ a {
 
 .container-search {
   margin-left: 3.5rem;
+  position: relative;
 }
 
 .container-search a {
@@ -48,12 +37,45 @@ a {
   text-decoration: none;
 }
 
+.container-search input {
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  width: 18rem;
+  position: relative;
+  padding-right: 2.5rem;
+}
+
+.container-search button {
+  right: 0.5rem;
+  top: 0.5rem;
+  position: absolute;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.container-search img {
+  width: 1.5rem;
+  height: 1.3rem;
+}
+
+.container-search input:focus {
+  outline: none;
+  border: 0.1rem solid var(--aeroBlue);
+}
+
 .container-search a span {
   color: var(--esmerald);
 }
 
 .container-auth {
   margin-right: 3.5rem;
+}
+
+.container-auth a {
+  color: var(--pictonBlue);
 }
 
 .container-auth img {
