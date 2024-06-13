@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --gray200: #ccc;
+  --gray100: #f1f5f9;
+  --whiteFull: #fff;
+  --black900: #111;
+  --pictonBlue: #00a8e8;
+  --neonBlue: #5863f8;
+  --mayaBlue: #5fbff9;
+  --royalBlue: #01295f;
+  --blue900: #011631;
+  --skyBlue: #00bbf9;
+  --aeroBlue: #5db7de;
+  --byzantineBlue: #3d52d5;
+  --viridian: #5b9279;
+  --celadron: #8fcb9b;
+  --seaGreen: #5c946e;
+  --malachite: #04e762;
+  --esmerald: #45cb85;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
