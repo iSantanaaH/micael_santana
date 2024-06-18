@@ -2,6 +2,7 @@
   --gray200: #ccc;
   --gray100: #f1f5f9;
   --whiteFull: #fff;
+  --white900: #f5f5f5ea;
   --black900: #111;
   --pictonBlue: #00a8e8;
   --neonBlue: #5863f8;
@@ -16,6 +17,7 @@
   --seaGreen: #5c946e;
   --malachite: #04e762;
   --esmerald: #45cb85;
+  --green700: #209458;
 }
 
 * {
@@ -26,4 +28,5 @@
 body {
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
+  background: var(--blue900);
 }

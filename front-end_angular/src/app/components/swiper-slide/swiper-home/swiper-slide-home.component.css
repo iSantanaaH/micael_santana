@@ -1,0 +1,49 @@
+.grid-swiper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  /* background: var(); */
+  padding: 3rem 0.7rem 3rem 0.7rem;
+}
+
+.container-image img {
+  width: 40rem;
+  height: auto;
+  border-radius: 0.3rem;
+  filter: drop-shadow(0.2rem 0.2rem 0.2rem var(--black900));
+}
+
+.info-slide {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.info-slide h1 {
+  font-size: 2.1rem;
+  font-weight: 500;
+}
+
+.info-slide p {
+  width: 60%;
+  font-size: 1.1rem;
+  color: var(--gray200);
+}
+
+.info-slide .created {
+  color: var(--pictonBlue);
+  cursor: pointer;
+}
+
+.info-slide .created:hover {
+  color: var(--mayaBlue);
+}
+
+.info-slide .date {
+  color: var(--blue900);
+  cursor: pointer;
+}
+
+.info-slide .date:hover {
+  color: var(--gray200);
+}
