@@ -2,8 +2,19 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
-  /* background: var(); */
   padding: 3rem 0.7rem 3rem 0.7rem;
+  position: relative;
+  width: 100%;
+}
+
+.grid-swiper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0.1rem;
+  border-radius: 0.2rem;
+  background: var(--gray200);
 }
 
 .container-image img {
@@ -20,14 +31,20 @@
 }
 
 .info-slide h1 {
-  font-size: 2.1rem;
+  font-size: 2.3rem;
   font-weight: 500;
+}
+
+.info-slide h1:hover {
+  color: var(--black800);
+  cursor: pointer;
 }
 
 .info-slide p {
   width: 60%;
   font-size: 1.1rem;
-  color: var(--gray200);
+  color: var(--gray700);
+  line-height: 1.8rem;
 }
 
 .info-slide .created {
@@ -46,4 +63,37 @@
 
 .info-slide .date:hover {
   color: var(--gray200);
+}
+
+.container-circle {
+  display: flex;
+  position: absolute;
+  gap: 0.4rem;
+  bottom: 1rem;
+}
+
+.container-circle .circle {
+  width: 1rem;
+  height: 1rem;
+  box-sizing: border-box;
+  border-radius: 100%;
+  border: 0.1rem solid var(--black900);
+  position: relative;
+  transition: background 0.5s ease-in-out;
+}
+
+.container-circle .circle:hover {
+  cursor: pointer;
+}
+
+.container-circle .circle.active::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: var(--pictonBlue);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
 }

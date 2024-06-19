@@ -1,14 +1,17 @@
 :root {
   --gray200: #ccc;
+  --gray700: #616161;
   --gray100: #f1f5f9;
   --whiteFull: #fff;
   --white900: #f5f5f5ea;
   --black900: #111;
+  --black800: #2c2c2c;
   --pictonBlue: #00a8e8;
   --neonBlue: #5863f8;
   --mayaBlue: #5fbff9;
   --royalBlue: #01295f;
   --blue900: #011631;
+  --blue700: #131e31;
   --skyBlue: #00bbf9;
   --aeroBlue: #5db7de;
   --byzantineBlue: #3d52d5;
@@ -28,5 +31,5 @@
 body {
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
-  background: var(--blue900);
+  background: var(--white900);
 }
