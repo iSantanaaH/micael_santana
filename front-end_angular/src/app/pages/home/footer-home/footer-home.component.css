@@ -1,0 +1,88 @@
+:host {
+  .footer {
+    background: var(--gray100);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 4rem 0 4rem 0;
+  }
+
+  .footer div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+  .footer .content-form h1 {
+    color: var(--black900);
+    transition: color 0.2s ease-in-out;
+    font-size: 2.3rem;
+    font-weight: 400;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .footer .content-form form {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .footer .content-form h1:hover {
+    color: var(--black800);
+  }
+
+  .footer .content-form input {
+    width: 35rem;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    border: 0.1rem solid transparent;
+    font-size: 1.1rem;
+    color: var(--blue900);
+    box-sizing: border-box;
+    height: 2.7rem;
+  }
+
+  .footer .content-form button {
+    width: 10rem;
+    height: 2.7rem;
+    border: none;
+    border-radius: 0.2rem;
+    background: var(--mayaBlue);
+    font-size: 1.1rem;
+    color: var(--gray100);
+    cursor: pointer;
+    transition: color 0.4s ease-in-out, background 0.4s ease-in-out;
+  }
+
+  .footer .content-form button:hover {
+    color: var(--whiteFull);
+    background: var(--blue150);
+  }
+
+  .footer div input:focus {
+    outline: none;
+    border: 0.1rem solid var(--pictonBlue);
+    box-sizing: border-box;
+  }
+
+  .footer div .name {
+    color: var(--pictonBlue);
+  }
+
+  .footer .surname {
+    color: var(--esmerald);
+  }
+
+  .footer .copy {
+    color: var(--black900);
+    font-size: 1.2rem;
+  }
+
+  .footer div p {
+    color: var(--gray700);
+    font-size: 1.1rem;
+  }
+}
