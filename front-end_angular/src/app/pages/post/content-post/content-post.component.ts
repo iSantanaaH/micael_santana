@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
+import { FooterPostComponent } from '../footer-post/footer-post.component';
+import { HeaderPostComponent } from '../header-post/header-post.component';
 
 @Component({
   selector: 'app-content-post',
   standalone: true,
-  imports: [],
+  imports: [FooterPostComponent, HeaderPostComponent],
   templateUrl: './content-post.component.html',
-  styleUrl: './content-post.component.css'
+  styleUrl: './content-post.component.css',
 })
-export class ContentPostComponent {
-
-}
+export default class ContentPostComponent {}
