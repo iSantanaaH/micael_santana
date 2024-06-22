@@ -45,7 +45,7 @@
   .login-box h2 {
     margin: 0 0 1.25rem;
     padding: 0;
-    color: #333;
+    color: var(--black750);
     font-size: 1.5rem;
     font-weight: 600;
   }
@@ -62,7 +62,7 @@
     border: none;
     border-bottom: 0.125rem solid var(--black750);
     outline: none;
-    color: #333;
+    color: var(--black750);
     font-size: 1rem;
   }
 
