@@ -17,7 +17,7 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'auth-user/register',
+    path: 'auth-user/cadastro',
     loadComponent: () =>
       import('./pages/user/auth/register/register.component'),
     pathMatch: 'full',
