@@ -28,6 +28,18 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
+    path: 'policy-of-privacity',
+    loadComponent: () =>
+      import('./pages/policy-of-privacity/policy-of-privacity.component'),
+    pathMatch: 'full',
+  },
+  {
+    path: 'post:id',
+    loadComponent: () =>
+      import('./pages/post/content-post/content-post.component'),
+    pathMatch: 'full',
+  },
+  {
     path: '**',
     redirectTo: 'not-found',
     pathMatch: 'full',
