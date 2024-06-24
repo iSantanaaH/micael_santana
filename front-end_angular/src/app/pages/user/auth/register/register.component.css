@@ -10,6 +10,10 @@
     color: var(--neonBlue);
   }
 
+  a:focus {
+    outline: none;
+  }
+
   .main {
     display: flex;
     justify-content: center;
@@ -111,6 +115,10 @@
     cursor: pointer;
     transition: background 0.3s;
     border-radius: 0.2rem;
+  }
+
+  .button-box button:focus {
+    outline: none;
   }
 
   .button-box button:hover {
