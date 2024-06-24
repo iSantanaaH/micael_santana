@@ -48,6 +48,17 @@
   line-height: 1.8rem;
 }
 
+.info-slide a {
+  color: var(--pictonBlue);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.info-slide a:hover {
+  color: var(--mayaBlue);
+}
+
 .info-slide .created {
   color: var(--pictonBlue);
   cursor: pointer;
