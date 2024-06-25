@@ -4,6 +4,7 @@
   justify-items: center;
   padding: 3rem 0.7rem 3rem 0.7rem;
   position: relative;
+  align-items: center;
   width: 100%;
 }
 
@@ -52,7 +53,7 @@
   color: var(--pictonBlue);
   text-decoration: none;
   cursor: pointer;
-  transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease;
 }
 
 .info-slide a:hover {
