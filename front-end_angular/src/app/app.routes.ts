@@ -35,7 +35,7 @@ export const routes: Routes = [
     path: 'about-me',
     loadComponent: () => import('./pages/about-me/about-me.component'),
     pathMatch: 'full',
-    title: 'Sobre Micael Santana',
+    title: 'Sobre',
   },
   {
     path: 'policy-of-privacity',
