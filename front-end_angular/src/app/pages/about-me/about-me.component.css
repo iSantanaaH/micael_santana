@@ -5,6 +5,34 @@
     box-sizing: border-box;
   }
 
+  .redirect-home {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    background: var(--esmerald);
+    top: 4rem;
+    left: 0;
+    width: 4rem;
+    height: 3rem;
+    border-radius: 0 2rem 2rem 0;
+    transition: 0.3s ease;
+  }
+
+  .redirect-home a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .redirect-home:hover {
+    cursor: pointer;
+    background: var(--esmeraldHover);
+  }
+
+  .redirect-home img {
+    width: 2rem;
+  }
+
   .about-me .style-border {
     border-bottom: 0.1rem solid var(--gray200);
     width: 50%;
