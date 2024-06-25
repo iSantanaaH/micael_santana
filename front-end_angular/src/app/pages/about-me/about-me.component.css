@@ -46,7 +46,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 45rem;
-    height: 13rem;
+    height: auto;
   }
 
   .description div {
@@ -67,36 +67,35 @@
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    padding: 0.6rem;
+    padding: 0.7rem;
+    margin-top: 1rem;
   }
 
   .description button::after {
     content: "";
-    width: 3rem;
-    height: 100%;
-    border-radius: 50%;
-    top: 0;
-    right: 0;
-    background: var(--esmerald);
     position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 3.3rem;
+    height: 100%;
+    background: var(--esmerald);
+    border-radius: 10rem;
   }
 
   .description button::before {
     content: "";
-    width: 3rem;
-    height: 100%;
-    border-radius: 50%;
-    top: 0;
-    right: 0;
-    background: var(--esmerald);
     position: absolute;
-    transition: width 0.2s ease;
+    bottom: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--esmerald);
+    transition: all 0.5s;
+    border-radius: 10rem;
   }
 
   .description button:hover::before {
     width: 100%;
-    right: 0;
-    border-radius: 0;
   }
 
   .description button span {
@@ -108,6 +107,10 @@
   .description button img {
     width: 1.6rem;
     z-index: 2;
+  }
+
+  .description a {
+    text-decoration: none;
   }
 
   .container-boxes {
