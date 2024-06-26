@@ -237,4 +237,61 @@
     width: 2.5rem;
     height: auto;
   }
+
+  .container-projects {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 0 0 5rem;
+    width: calc(100% - 11rem);
+  }
+
+  .content-projects {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+  }
+
+  .container-projects h1 {
+    font-size: 3.2rem;
+    margin-bottom: 4rem;
+    font-weight: 500;
+    color: var(--esmerald);
+  }
+
+  .project img {
+    width: 100%;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  .project {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    max-width: 30rem;
+  }
+
+  .project h2 {
+    font-size: 1.9rem;
+    color: var(--gray200);
+    transition: color 0.3s ease-in-out;
+  }
+
+  .project h2:hover {
+    color: var(--gray100);
+    cursor: pointer;
+  }
+
+  .project p {
+    font-size: 1.1rem;
+    color: var(--gray600);
+    transition: color 0.3s ease-in-out;
+  }
+
+  .project p:hover {
+    color: var(--gray500);
+    cursor: pointer;
+  }
 }
