@@ -276,7 +276,7 @@
   .project h2 {
     font-size: 1.9rem;
     color: var(--gray200);
-    transition: color 0.3s ease-in-out;
+    transition: color 0.2s ease-in-out;
   }
 
   .project h2:hover {
@@ -287,11 +287,29 @@
   .project p {
     font-size: 1.1rem;
     color: var(--gray600);
-    transition: color 0.3s ease-in-out;
+    transition: color 0.2s ease-in-out;
   }
 
   .project p:hover {
     color: var(--gray500);
     cursor: pointer;
+  }
+
+  .project .created {
+    color: var(--pictonBlue);
+    transition: color 0.2 ease-in-out;
+  }
+
+  .project .created:hover {
+    color: var(--mayaBlue);
+  }
+
+  .project .date {
+    color: var(--gray700);
+    transition: color 0.2s ease-in-out;
+  }
+
+  .project .date:hover {
+    color: var(--gray200);
   }
 }
