@@ -36,7 +36,7 @@
   .about-me .style-border {
     border-bottom: 0.1rem solid var(--gray200);
     width: 50%;
-    margin: 5rem auto;
+    margin: 3rem auto;
     border-radius: 0.2rem;
   }
 
@@ -62,12 +62,18 @@
   }
 
   .info {
-    margin: 3rem 0 3rem 10rem;
+    width: calc(100% - 11rem);
+    margin: 3rem auto;
+    min-height: 25rem;
   }
 
-  .container-flex {
-    display: flex;
+  .container-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .info h2 {
@@ -82,6 +88,7 @@
     grid-template-columns: repeat(2, 1fr);
     width: 45rem;
     height: auto;
+    grid-column: 1;
   }
 
   .description div {
@@ -150,7 +157,9 @@
 
   .container-boxes {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
+    grid-column: 2;
   }
 
   .box {
@@ -243,6 +252,14 @@
     flex-direction: column;
     margin: 3rem 0 0 5rem;
     width: calc(100% - 11rem);
+    margin-bottom: 3.5rem;
+  }
+
+  .container-projects .style-border-projects {
+    border-bottom: 0.1rem solid var(--gray200);
+    width: 50%;
+    margin: 5rem auto;
+    border-radius: 0.2rem;
   }
 
   .content-projects {
@@ -311,5 +328,18 @@
 
   .project .date:hover {
     color: var(--gray200);
+  }
+
+  .courses-formations {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .courses-formations .courses {
+    grid-column: 1;
+  }
+
+  .courses-formations .formations {
+    grid-column: 2;
   }
 }
