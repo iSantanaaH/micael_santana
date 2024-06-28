@@ -333,13 +333,124 @@
   .courses-formations {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .courses-formations .courses {
-    grid-column: 1;
+    grid-template-rows: repeat(2, 1fr);
   }
 
   .courses-formations .formations {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+  }
+
+  .formations .flex-formations,
+  .experiences .flex-experiences {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .formations .container-image img,
+  .experiences .container-image img {
+    width: 2rem;
+  }
+
+  .formations .container-image,
+  .experiences .container-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--pictonBlue);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    padding: 0.2rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+  }
+
+  .formations .container-image::after,
+  .experiences .container-image::after {
+    content: "";
+    position: absolute;
+    top: 3.5rem;
+    left: 1.5rem;
+    width: 0.15rem;
+    height: 1.5rem;
+    border-radius: 0.2rem;
+    background: var(--esmerald);
+    z-index: 1;
+  }
+
+  .description-formation .date-inity,
+  .description-experience .date-inity {
+    color: var(--gray200);
+    background: var(--black800);
+    width: 13rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    transition: color 0.2s ease-in-out;
+  }
+
+  .description-formation .date-inity:hover,
+  .description-experience .date-inity:hover {
+    color: var(--gray100);
+    cursor: pointer;
+  }
+
+  .description-formation .title-formation,
+  .description-experience .title-experience {
+    color: var(--gray200);
+    transition: color 0.2s ease-in-out;
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+
+  .description-formation .title-formation:hover,
+  .description-experience .title-experience:hover {
+    color: var(--gray100);
+    cursor: pointer;
+  }
+
+  .description-formation .university,
+  .description-experience .company {
+    color: var(--gray600);
+    transition: color 0.2s ease-in-out;
+  }
+
+  .description-formation .university:hover,
+  .description-experience .company:hover {
+    color: var(--gray500);
+    cursor: pointer;
+  }
+
+  .courses-formations .experiences {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
     grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+  }
+
+  .courses-formations .courses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .courses-formations .formations h1,
+  .courses-formations .experiences h1,
+  .courses-formations .courses h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--esmerald);
   }
 }
