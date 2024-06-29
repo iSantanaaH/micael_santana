@@ -158,7 +158,7 @@
   .container-boxes {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
     grid-column: 2;
   }
 
@@ -169,6 +169,12 @@
     width: 25rem;
     border: 0.1rem solid var(--pictonBlue);
     border-radius: 0.3rem;
+    transition: 0.2s ease-in-out;
+  }
+
+  .box:hover {
+    transform: scale(1.1);
+    cursor: pointer;
   }
 
   .box h1 {
