@@ -333,32 +333,71 @@
   .courses-formations {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 5rem;
   }
 
   .courses-formations .formations {
     display: flex;
     flex-direction: column;
+    justify-self: center;
     gap: 1.2rem;
     grid-column: 1;
     grid-row: 1;
     justify-self: center;
+    width: 30rem;
+  }
+
+  .courses-formations .experiences {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+    width: 30rem;
+  }
+
+  .courses-formations .courses {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    grid-column: 1;
+    grid-row: 2;
+    width: 30rem;
+    padding-bottom: 10rem;
   }
 
   .formations .flex-formations,
-  .experiences .flex-experiences {
+  .experiences .flex-experiences,
+  .courses .flex-courses {
     display: flex;
     align-items: center;
+    flex-direction: column;
     gap: 1rem;
   }
 
+  .flex-courses .course,
+  .flex-experiences .experience,
+  .flex-formations .formation {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .flex-courses .course {
+    padding-bottom: 2rem;
+  }
+
   .formations .container-image img,
-  .experiences .container-image img {
+  .experiences .container-image img,
+  .courses .container-image img {
     width: 2rem;
   }
 
   .formations .container-image,
-  .experiences .container-image {
+  .experiences .container-image,
+  .courses .container-image {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -373,7 +412,8 @@
   }
 
   .formations .container-image::after,
-  .experiences .container-image::after {
+  .experiences .container-image::after,
+  .courses .container-image::after {
     content: "";
     position: absolute;
     top: 3.5rem;
@@ -386,7 +426,8 @@
   }
 
   .description-formation .date-inity,
-  .description-experience .date-inity {
+  .description-experience .date-inity,
+  .description-courses .date-inity {
     color: var(--gray200);
     background: var(--black800);
     width: 13rem;
@@ -397,13 +438,15 @@
   }
 
   .description-formation .date-inity:hover,
-  .description-experience .date-inity:hover {
+  .description-experience .date-inity:hover,
+  .description-courses .date-inity:hover {
     color: var(--gray100);
     cursor: pointer;
   }
 
   .description-formation .title-formation,
-  .description-experience .title-experience {
+  .description-experience .title-experience,
+  .description-courses .title-courses {
     color: var(--gray200);
     transition: color 0.2s ease-in-out;
     font-weight: 500;
@@ -411,39 +454,24 @@
   }
 
   .description-formation .title-formation:hover,
-  .description-experience .title-experience:hover {
+  .description-experience .title-experience:hover,
+  .description-courses .title-courses:hover {
     color: var(--gray100);
     cursor: pointer;
   }
 
   .description-formation .university,
-  .description-experience .company {
+  .description-experience .company,
+  .description-courses .institution {
     color: var(--gray600);
     transition: color 0.2s ease-in-out;
   }
 
   .description-formation .university:hover,
-  .description-experience .company:hover {
+  .description-experience .company:hover,
+  .description-courses .institution:hover {
     color: var(--gray500);
     cursor: pointer;
-  }
-
-  .courses-formations .experiences {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    grid-column: 2;
-    grid-row: 1;
-    justify-self: center;
-  }
-
-  .courses-formations .courses {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    grid-column: 1;
-    grid-row: 2;
   }
 
   .courses-formations .formations h1,
@@ -452,5 +480,6 @@
     font-size: 2rem;
     font-weight: 500;
     color: var(--esmerald);
+    margin-bottom: 1rem;
   }
 }
