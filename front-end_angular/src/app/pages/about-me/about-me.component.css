@@ -1,709 +1,404 @@
+.main {
+  min-height: 100vh;
+  background: var(--black900);
+  box-sizing: border-box;
+}
+.content-informations,
+.description {
+  display: grid;
+  height: auto;
+  grid-template-columns: repeat(2, 1fr);
+}
+.box:hover,
+.content-skills .skill:hover {
+  transform: scale(1.1);
+}
+.content-skills .skill,
+.project img {
+  transition: 0.2s;
+  aspect-ratio: 1;
+  cursor: pointer;
+}
+.content-informations,
+.courses-formations,
+.description {
+  grid-template-columns: repeat(2, 1fr);
+}
 :host {
-  .main {
-    min-height: 100vh;
-    background: var(--black900);
-    box-sizing: border-box;
-  }
-
-  .redirect-home a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .redirect-home:hover {
-    cursor: pointer;
-    background: var(--esmeraldHover);
-  }
-
-  .redirect-home img {
-    width: 2rem;
-  }
-
-  .about-me .style-border {
-    border-bottom: 0.1rem solid var(--gray200);
-    width: 50%;
-    margin: 3rem auto;
-    border-radius: 0.2rem;
-  }
-
-  .about-me .title-about {
-    text-align: center;
-    font-size: 3.2rem;
-    font-weight: 500;
-    color: var(--pictonBlue);
-    padding-top: 5rem;
-  }
-
-  .about-me .title-about span {
-    color: var(--esmerald);
-  }
-
-  .description p {
-    color: var(--gray700);
-  }
-
-  .description span {
-    font-weight: bold;
-    color: var(--whiteFull);
-  }
-
-  .info {
-    width: calc(100% - 11rem);
-    margin: 3rem auto;
-    min-height: 25rem;
-  }
-
-  .content-informations {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    height: auto;
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .info .title-personal-informations {
-    font-weight: 600;
-    color: var(--pictonBlue);
-    margin-bottom: 1.2rem;
-    font-size: 1.8rem;
-  }
-
-  .description {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 45rem;
-    height: auto;
-    grid-column: 1;
-  }
-
-  .description div {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .description button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: transparent;
-    border: 0.1rem solid var(--esmerald);
-    color: var(--whiteFull);
-    border-radius: 2rem;
-    width: 14rem;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    padding: 0.7rem;
-    margin-top: 1rem;
-  }
-
-  .description button::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 3.3rem;
-    height: 100%;
-    background: var(--esmerald);
-    border-radius: 10rem;
-  }
-
-  .description button::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 0%;
-    height: 100%;
-    background: var(--esmerald);
-    transition: all 0.5s;
-    border-radius: 10rem;
-  }
-
-  .description button:hover::before {
-    width: 100%;
-  }
-
-  .description button span {
-    font-size: 0.9rem;
-    z-index: 1;
-    position: relative;
-  }
-
-  .description button img {
-    width: 1.6rem;
-    z-index: 2;
-  }
-
-  .description a {
-    text-decoration: none;
-  }
-
-  .container-boxes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    grid-column: 2;
-  }
-
-  .box {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    width: 25rem;
-    border: 0.1rem solid var(--pictonBlue);
-    border-radius: 0.3rem;
-    transition: 0.2s ease-in-out;
-  }
-
-  .box:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-  }
-
-  .box h1 {
-    color: var(--pictonBlue);
-    font-size: 3rem;
-    font-weight: 500;
-    padding: 1rem;
-  }
-
-  .box p {
-    font-size: 1.2rem;
-    color: var(--esmerald);
-  }
-
-  .container-skills h1 {
-    text-align: center;
-    font-size: 3.2rem;
-    font-weight: 500;
-    color: var(--esmerald);
-  }
-
-  .container-skills {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .content-skills {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    padding: 0.5rem;
-    max-width: calc(100% - 11rem);
-    flex-wrap: wrap;
-    margin-top: 3.5rem;
-  }
-
-  .content-skills .skill {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.4rem;
-    cursor: pointer;
-    aspect-ratio: 1;
-    width: 8.5rem;
-    border-top-left-radius: 2rem;
-    background: var(--black800);
-    transition: 0.2s;
-    position: relative;
-  }
-
-  .content-skills .skill:hover {
-    transform: scale(1.1);
-  }
-
-  .content-skills .skill::after {
-    content: "";
-    width: 100%;
-    height: 0.24rem;
-    background: linear-gradient(to right, var(--white900), var(--pictonBlue));
-    bottom: 0;
-    left: 0;
-    position: absolute;
-  }
-
-  .content-skills .skill h4 {
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--pictonBlue);
-  }
-
-  .content-skills .skill img {
-    width: 2.5rem;
-    height: auto;
-  }
-
-  .container-projects {
-    display: flex;
-    flex-direction: column;
-    margin: 3rem 0 0 5rem;
-    width: calc(100% - 11rem);
-    margin-bottom: 3.5rem;
-  }
-
-  .container-projects .style-border-projects {
-    border-bottom: 0.1rem solid var(--gray200);
-    width: 50%;
-    margin: 5rem auto;
-    border-radius: 0.2rem;
-  }
-
-  .content-projects {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 5rem;
-  }
-
-  .container-projects h1 {
-    font-size: 3.2rem;
-    margin-bottom: 4rem;
-    font-weight: 500;
-    color: var(--esmerald);
-  }
-
-  .project img {
-    width: 100%;
-    height: 20rem;
-    border-radius: 0.5rem;
-    box-sizing: border-box;
-    cursor: pointer;
-    transition: 0.2s;
-    aspect-ratio: 1;
-  }
-
-  .project {
-    display: flex;
-    flex-direction: column;
-    gap: 0.7rem;
-    max-width: 30rem;
-  }
-
-  .project h2 {
-    font-size: 1.9rem;
-    color: var(--gray200);
-    transition: color 0.2s ease-in-out;
-  }
-
-  .project h2:hover {
-    color: var(--gray100);
-    cursor: pointer;
-  }
-
-  .project p {
-    font-size: 1.1rem;
-    color: var(--gray600);
-    transition: color 0.2s ease-in-out;
-  }
-
-  .project p:hover {
-    color: var(--gray500);
-    cursor: pointer;
-  }
-
-  .project .created {
-    color: var(--pictonBlue);
-    transition: color 0.2 ease-in-out;
-  }
-
-  .project .created:hover {
-    color: var(--mayaBlue);
-  }
-
-  .project .date {
-    color: var(--gray700);
-    transition: color 0.2s ease-in-out;
-  }
-
-  .project .date:hover {
-    color: var(--gray200);
-  }
-
-  .courses-formations {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto auto;
-    gap: 5rem;
-  }
-
-  .courses-formations .formations {
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    gap: 1.2rem;
-    grid-column: 1;
-    grid-row: 1;
-    justify-self: center;
-    width: 30rem;
-  }
-
-  .courses-formations .experiences {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    grid-column: 2;
-    grid-row: 1;
-    justify-self: center;
-    width: 30rem;
-  }
-
-  .courses-formations .courses {
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    grid-column: 1;
-    grid-row: 2;
-    width: 30rem;
-    padding-bottom: 10rem;
-  }
-
-  .formations .flex-formations,
-  .experiences .flex-experiences,
-  .courses .flex-courses {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .flex-courses .course,
-  .flex-experiences .experience,
-  .flex-formations .formation {
-    display: flex;
-    gap: 1rem;
-    width: 100%;
-  }
-
-  .flex-courses .course {
-    padding-bottom: 2rem;
-  }
-
-  .formations .container-image img,
-  .experiences .container-image img,
-  .courses .container-image img {
-    width: 2rem;
-  }
-
-  .formations .container-image,
-  .experiences .container-image,
-  .courses .container-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--pictonBlue);
-    width: 3rem;
-    height: 3rem;
-    border-radius: 100%;
-    padding: 0.2rem;
-    cursor: pointer;
-    position: relative;
-    z-index: 1;
-  }
-
-  .formations .container-image::after,
-  .experiences .container-image::after,
-  .courses .container-image::after {
-    content: "";
-    position: absolute;
-    top: 3.5rem;
-    left: 1.5rem;
-    width: 0.15rem;
-    height: 1.5rem;
-    border-radius: 0.2rem;
-    background: var(--esmerald);
-    z-index: 1;
-  }
-
-  .description-formation .date-inity,
-  .description-experience .date-inity,
-  .description-courses .date-inity {
-    color: var(--gray200);
-    background: var(--black800);
-    width: 13rem;
-    text-align: center;
-    border-radius: 0.5rem;
-    margin-bottom: 0.5rem;
-    padding: 0.1rem;
-    transition: color 0.2s ease-in-out;
-  }
-
-  .description-formation .date-inity:hover,
-  .description-experience .date-inity:hover,
-  .description-courses .date-inity:hover {
-    color: var(--gray100);
-    cursor: pointer;
-  }
-
-  .description-formation .title-formation,
-  .description-experience .title-experience,
-  .description-courses .title-courses {
-    color: var(--gray200);
-    transition: color 0.2s ease-in-out;
-    font-weight: 500;
-    font-size: 1.1rem;
-  }
-
-  .description-formation .title-formation:hover,
-  .description-experience .title-experience:hover,
-  .description-courses .title-courses:hover {
-    color: var(--gray100);
-    cursor: pointer;
-  }
-
-  .description-formation .university,
-  .description-experience .company,
-  .description-courses .institution {
-    color: var(--gray600);
-    transition: color 0.2s ease-in-out;
-  }
-
-  .description-formation .university:hover,
-  .description-experience .company:hover,
-  .description-courses .institution:hover {
-    color: var(--gray500);
-    cursor: pointer;
-  }
-
-  .courses-formations .formations h1,
-  .courses-formations .experiences h1,
-  .courses-formations .courses h1 {
-    font-size: 2rem;
-    font-weight: 500;
-    color: var(--esmerald);
-    margin-bottom: 1rem;
-  }
-
-  @media only screen and (max-width: 320px) {
-    .about-me .title-about,
-    .container-skills h1 {
-      font-size: 1.7rem;
-      text-align: center;
-    }
-
-    .info {
-      width: 100%;
-    }
-
-    .info .title-personal-informations {
-      text-align: center;
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .content-informations {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .description {
-      display: flex;
-      flex-direction: column;
-      width: calc(100% - 1.25rem);
-    }
-
-    .description div {
-      margin-bottom: 0.6rem;
-    }
-
-    .description p {
-      font-size: 0.8rem;
-    }
-
-    .description span {
-      font-size: 0.8rem;
-    }
-
-    .description button {
-      height: 3rem;
-      margin: 1rem 0 3rem 0;
-    }
-
-    .description button span {
-      font-size: 0.8rem;
-    }
-
-    .box {
-      display: flex;
-      gap: 0.4rem;
-      justify-content: center;
-      width: 14rem;
-      height: 5rem;
-      margin: 0 auto;
-    }
-
-    .box h1 {
-      font-size: 2rem;
-    }
-
-    .box p {
-      font-size: 1rem;
-    }
-
-    .container-skills {
-      display: flex;
-    }
-
-    .container-skills {
-      width: 100%;
-    }
-
-    .content-skills {
-      max-width: calc(100% - 2rem);
-    }
-
-    .content-skills .skill {
-      width: 100%;
-      width: 6.5rem;
-    }
-
-    .content-skills .skill img {
-      width: 2rem;
-    }
-
-    .content-skills .skill h4 {
-      font-size: 0.8rem;
-    }
-
-    .container-projects {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      flex-direction: column;
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    .container-projects img {
-      height: 14rem;
-      aspect-ratio: 1;
-    }
-
-    .container-projects h1 {
-      font-size: 1.7rem;
-      text-align: center;
-      margin-top: 3rem;
-    }
-
-    .project {
-      display: flex;
-      width: calc(100% - 2rem);
-      margin: 0 auto;
-    }
-
-    .project img:hover {
-      transform: scale(1.03);
-    }
-
-    .project p {
-      font-size: 0.9rem;
-    }
-
-    .project h2 {
-      font-size: 1.1rem;
-      font-weight: 600;
-    }
-
-    .courses-formations {
-      display: flex;
-      flex-direction: column;
-      gap: 4rem;
-    }
-
-    .courses-formations .formations h1,
-    .courses-formations .experiences h1,
-    .courses-formations .courses h1 {
-      font-size: 1.7rem;
-    }
-
-    .courses-formations .formations,
-    .courses-formations .experiences,
-    .courses-formations .courses {
-      width: calc(100% - 2rem);
-      margin: 0 auto;
-    }
-
-    .formations .container-image img,
-    .experiences .container-image img,
-    .courses .container-image img {
-      width: 1.5rem;
-    }
-
-    .formations .container-image,
-    .experiences .container-image,
-    .courses .container-image {
-      width: 5rem;
-      aspect-ratio: 1;
-    }
-
-    .description-formation .date-inity,
-    .description-experience .date-inity,
-    .description-courses .date-inity {
-      font-size: 0.9rem;
-      width: 12rem;
-      padding: 0.2rem;
-    }
-
-    .formations .container-image::after,
-    .experiences .container-image::after,
-    .courses .container-image::after {
-      left: 1.6rem;
-    }
-
-    .description-formation .title-formation,
-    .description-experience .title-experience,
-    .description-courses .title-courses {
-      font-size: 0.9rem;
-    }
-
-    .description-formation .university,
-    .description-experience .company,
-    .description-courses .institution {
-      font-size: 0.8rem;
-    }
-  }
-
-  @media only screen and (min-width: 321px) and (max-width: 767px) {
-    .project img:hover {
-      transform: scale(1.1);
-    }
-  }
-
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .project img:hover {
-      transform: scale(1.1);
-    }
-  }
-
-  @media only screen and (min-width: 1024px) and (max-width: 1439px) {
-    .project img:hover {
-      transform: scale(1.1);
-    }
-  }
-
-  @media only screen and (min-width: 1440px) {
-    .project img:hover {
-      transform: scale(1.1);
-    }
-
-    .redirect-home {
-      display: flex;
-      justify-content: center;
-      position: fixed;
-      background: var(--esmerald);
-      top: 4rem;
-      left: 0;
-      width: 4rem;
-      height: 3rem;
-      border-radius: 0 2rem 2rem 0;
-      transition: 0.3s ease;
-    }
-  }
+  background: var(--black900);
+  box-sizing: border-box;
+}
+.redirect-home a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.redirect-home:hover {
+  cursor: pointer;
+  background: var(--esmeraldHover);
+}
+.courses .container-image img,
+.experiences .container-image img,
+.formations .container-image img,
+.redirect-home img {
+  width: 2rem;
+}
+.about-me .style-border {
+  border-bottom: 0.1rem solid var(--gray200);
+  width: 50%;
+  margin: 3rem auto;
+  border-radius: 0.2rem;
+}
+.about-me .title-about {
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: var(--pictonBlue);
+  padding-top: 5rem;
+}
+.about-me .title-about span {
+  color: var(--esmerald);
+}
+.description p {
+  color: var(--gray700);
+}
+.description span {
+  font-weight: 700;
+  color: var(--whiteFull);
+}
+.info {
+  width: calc(100% - 11rem);
+  margin: 3rem auto;
+  min-height: 25rem;
+}
+.content-informations {
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+.info .title-personal-informations {
+  font-weight: 600;
+  color: var(--pictonBlue);
+  margin-bottom: 1.2rem;
+  font-size: 1.8rem;
+}
+.description {
+  width: 45rem;
+  grid-column: 1;
+}
+.description div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.description button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: 0 0;
+  border: 0.1rem solid var(--esmerald);
+  color: var(--whiteFull);
+  border-radius: 2rem;
+  width: 14rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  padding: 0.7rem;
+  margin-top: 1rem;
+}
+.description button::after,
+.description button::before {
+  right: 0;
+  height: 100%;
+  background: var(--esmerald);
+  border-radius: 10rem;
+  bottom: 0;
+  content: "";
+  position: absolute;
+}
+.box h1,
+.project .created {
+  color: var(--pictonBlue);
+}
+.description button::after {
+  width: 3.3rem;
+}
+.description button::before {
+  width: 0%;
+  transition: 0.5s;
+}
+.description button:hover::before {
+  width: 100%;
+}
+.description button span {
+  font-size: 0.9rem;
+  z-index: 1;
+  position: relative;
+}
+.description button img {
+  width: 1.6rem;
+  z-index: 2;
+}
+.description a {
+  text-decoration: none;
+}
+.container-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  grid-column: 2;
+}
+.box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 25rem;
+  border: 0.1rem solid var(--pictonBlue);
+  border-radius: 0.3rem;
+  transition: 0.2s ease-in-out;
+}
+.box:hover {
+  cursor: pointer;
+}
+.box h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  padding: 1rem;
+}
+.box p {
+  font-size: 1.2rem;
+  color: var(--esmerald);
+}
+.container-skills h1 {
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: var(--esmerald);
+}
+.container-skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content-skills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.5rem;
+  max-width: calc(100% - 11rem);
+  flex-wrap: wrap;
+  margin-top: 3.5rem;
+}
+.content-skills .skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 8.5rem;
+  border-top-left-radius: 2rem;
+  background: var(--black800);
+  position: relative;
+}
+.container-projects,
+.project {
+  display: flex;
+  flex-direction: column;
+}
+.content-skills .skill::after {
+  content: "";
+  width: 100%;
+  height: 0.24rem;
+  background: linear-gradient(to right, var(--white900), var(--pictonBlue));
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+.content-skills .skill h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--pictonBlue);
+}
+.content-skills .skill img {
+  width: 2.5rem;
+  height: auto;
+}
+.container-projects {
+  margin: 3rem 0 3.5rem 5rem;
+  width: calc(100% - 11rem);
+}
+.container-projects .style-border-projects {
+  border-bottom: 0.1rem solid var(--gray200);
+  width: 50%;
+  margin: 5rem auto;
+  border-radius: 0.2rem;
+}
+.content-projects {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+.container-projects h1 {
+  font-size: 3.2rem;
+  margin-bottom: 4rem;
+  font-weight: 500;
+  color: var(--esmerald);
+}
+.project img {
+  width: 100%;
+  height: 20rem;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+}
+.project {
+  gap: 0.7rem;
+  max-width: 30rem;
+}
+.courses-formations .experiences,
+.courses-formations .formations {
+  flex-direction: column;
+  gap: 1.2rem;
+  grid-row: 1;
+  width: 30rem;
+  display: flex;
+}
+.project h2 {
+  font-size: 1.9rem;
+  color: var(--gray200);
+  transition: color 0.2s ease-in-out;
+}
+.description-courses .date-inity:hover,
+.description-courses .title-courses:hover,
+.description-experience .date-inity:hover,
+.description-experience .title-experience:hover,
+.description-formation .date-inity:hover,
+.description-formation .title-formation:hover,
+.project h2:hover {
+  color: var(--gray100);
+  cursor: pointer;
+}
+.project p {
+  font-size: 1.1rem;
+  color: var(--gray600);
+  transition: color 0.2s ease-in-out;
+}
+.description-courses .institution:hover,
+.description-experience .company:hover,
+.description-formation .university:hover,
+.project p:hover {
+  color: var(--gray500);
+  cursor: pointer;
+}
+.project .created:hover {
+  color: var(--mayaBlue);
+}
+.project .date {
+  color: var(--gray700);
+  transition: color 0.2s ease-in-out;
+}
+.project .date:hover {
+  color: var(--gray200);
+}
+.courses-formations {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 5rem;
+}
+.courses-formations .formations {
+  justify-self: center;
+  grid-column: 1;
+  justify-self: center;
+}
+.courses-formations .experiences {
+  grid-column: 2;
+  justify-self: center;
+}
+.courses-formations .courses {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  grid-column: 1;
+  grid-row: 2;
+  width: 30rem;
+  padding-bottom: 10rem;
+}
+.courses .flex-courses,
+.experiences .flex-experiences,
+.formations .flex-formations {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.flex-courses .course,
+.flex-experiences .experience,
+.flex-formations .formation {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+.flex-courses .course {
+  padding-bottom: 2rem;
+}
+.courses .container-image,
+.experiences .container-image,
+.formations .container-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--pictonBlue);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  padding: 0.2rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+}
+.courses .container-image::after,
+.experiences .container-image::after,
+.formations .container-image::after {
+  content: "";
+  position: absolute;
+  width: 0.15rem;
+  height: 1.5rem;
+  border-radius: 0.2rem;
+  background: var(--esmerald);
+  z-index: 1;
+}
+.description-courses .date-inity,
+.description-experience .date-inity,
+.description-formation .date-inity {
+  color: var(--gray200);
+  background: var(--black800);
+  width: 13rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.1rem;
+  transition: color 0.2s ease-in-out;
+}
+.description-courses .title-courses,
+.description-experience .title-experience,
+.description-formation .title-formation {
+  color: var(--gray200);
+  transition: color 0.2s ease-in-out;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.description-courses .institution,
+.description-experience .company,
+.description-formation .university {
+  color: var(--gray600);
+  transition: color 0.2s ease-in-out;
+}
+.courses-formations .courses h1,
+.courses-formations .experiences h1,
+.courses-formations .formations h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--esmerald);
+  margin-bottom: 1rem;
 }
