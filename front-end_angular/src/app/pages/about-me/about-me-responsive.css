@@ -1,7 +1,8 @@
-@media only screen and (max-width: 320px) {
+@media only screen and (min-width: 1px) and (max-width: 767px) {
   .about-me .title-about,
   .container-skills h1 {
-    font-size: 1.7rem;
+    font-size: 2rem;
+    padding-top: 1rem;
     text-align: center;
   }
   .info {
@@ -9,7 +10,7 @@
   }
   .info .title-personal-informations {
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin-bottom: 1rem;
   }
   .content-informations {
@@ -19,7 +20,7 @@
   .description {
     display: flex;
     flex-direction: column;
-    width: calc(100% - 1.25rem);
+    width: calc(100% - 3rem);
   }
   .description div {
     margin-bottom: 0.6rem;
@@ -145,18 +146,44 @@
   .courses .container-image::after,
   .experiences .container-image::after,
   .formations .container-image::after {
-    left: 1.1rem;
+    left: 1.125rem;
     top: 2.4rem;
-  }
-}
-@media only screen and (min-width: 321px) and (max-width: 767px) {
-  .project img:hover {
-    transform: scale(1.1);
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .project img:hover {
     transform: scale(1.1);
+  }
+
+  .courses-formations {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 5rem);
+    margin: 0 auto;
+  }
+
+  .description-formation .title-formation,
+  .description-experience .title-experience,
+  .description-courses .title-courses {
+    font-size: 1rem;
+  }
+
+  .description-formation .date-inity,
+  .description-experience .date-inity,
+  .description-courses .date-inity {
+    font-size: 0.9rem;
+  }
+
+  .description-formation .university,
+  .description-experience .company,
+  .description-courses .institution {
+    font-size: 0.8rem;
+  }
+  .courses .container-image::after,
+  .experiences .container-image::after,
+  .formations .container-image::after {
+    left: 1.6rem;
+    top: 3.3rem;
   }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1439px) {
