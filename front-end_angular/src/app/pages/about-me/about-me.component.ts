@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './about-me.component.html',
-  styleUrl: './about-me.component.css',
+  styleUrls: ['./about-me.component.css', 'about-me-responsive.css'],
 })
 export default class AboutMeComponent {}
