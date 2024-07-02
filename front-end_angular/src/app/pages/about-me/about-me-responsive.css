@@ -38,6 +38,9 @@
     height: 3rem;
     margin: 1rem 0 3rem;
   }
+  .container-boxes {
+    gap: 1rem;
+  }
   .box {
     display: flex;
     gap: 0.4rem;
@@ -190,21 +193,16 @@
   .project img:hover {
     transform: scale(1.1);
   }
+
+  .redirect-home {
+    position: fixed;
+  }
 }
 @media only screen and (min-width: 1440px) {
   .project img:hover {
     transform: scale(1.1);
   }
   .redirect-home {
-    display: flex;
-    justify-content: center;
     position: fixed;
-    background: var(--esmerald);
-    top: 4rem;
-    left: 0;
-    width: 4rem;
-    height: 3rem;
-    border-radius: 0 2rem 2rem 0;
-    transition: background 0.3s;
   }
 }

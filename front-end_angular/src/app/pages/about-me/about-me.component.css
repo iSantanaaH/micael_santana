@@ -50,6 +50,7 @@
   font-size: 3.2rem;
   font-weight: 500;
   color: var(--pictonBlue);
+  padding-top: 1.5rem;
 }
 .about-me .title-about span {
   color: var(--esmerald);
@@ -100,6 +101,32 @@
   overflow: hidden;
   padding: 0.7rem;
   margin-top: 1rem;
+}
+.redirect-home {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  background: var(--esmerald);
+  top: 4rem;
+  left: 0;
+  width: 4rem;
+  height: 3rem;
+  border-radius: 0 2rem 2rem 0;
+  transition: all 0.3s;
+  z-index: 100;
+  transform: translate(-75%);
+}
+.redirect-home:hover {
+  transform: translate(-10%);
+}
+.redirect-home img {
+  transition: all 0.3s;
+}
+.redirect-home:hover img {
+  width: 2rem;
+}
+.redirect-home:not(:hover) img {
+  display: none;
 }
 .description button::after,
 .description button::before {
