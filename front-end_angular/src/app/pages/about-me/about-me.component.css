@@ -185,6 +185,12 @@
   flex-wrap: wrap;
   margin-top: 3.5rem;
 }
+.content-skills .skill,
+.container-boxes .box {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
 .content-skills .skill {
   display: flex;
   flex-direction: column;
