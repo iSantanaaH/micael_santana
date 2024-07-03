@@ -3,6 +3,9 @@
   background: var(--black900);
   box-sizing: border-box;
 }
+.disableElement {
+  display: none;
+}
 .content-informations,
 .description {
   display: grid;
@@ -201,6 +204,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 40rem;
 }
 .content-skills {
   display: flex;
@@ -252,10 +256,6 @@
   width: 2.5rem;
   height: auto;
 }
-.container-projects {
-  margin: 3rem 0 3.5rem 5rem;
-  width: calc(100% - 11rem);
-}
 .container-projects .style-border-projects {
   border-bottom: 0.1rem solid var(--gray200);
   width: 50%;
@@ -267,10 +267,11 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 5rem;
+  min-height: 50rem;
 }
 .container-projects h1 {
   font-size: 3.2rem;
-  margin-bottom: 4rem;
+  margin: 0 auto 3rem auto;
   font-weight: 500;
   color: var(--esmerald);
 }
@@ -284,9 +285,25 @@
   border-radius: 0.5rem;
   box-sizing: border-box;
 }
+@keyframes animationLazy {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .project {
   gap: 0.7rem;
   max-width: 30rem;
+  transform: translateX(-100%);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+  opacity: 0;
+}
+.project.visible {
+  animation: animationLazy 1.5s forwards;
 }
 .courses-formations .experiences,
 .courses-formations .formations {

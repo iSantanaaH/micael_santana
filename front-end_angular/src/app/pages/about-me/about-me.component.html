@@ -56,6 +56,7 @@
   <div class="container-skills">
     <h1>Habilidades</h1>
     <div class="content-skills">
+      @defer (on viewport) {
       <div class="skill">
         <h4>Angular</h4>
         <img src="/assets/Images/angular.svg" loading="lazy" alt="Angular" />
@@ -124,13 +125,17 @@
         <h4>Git</h4>
         <img src="/assets/Images/git.svg" loading="lazy" alt="Git" />
       </div>
+      } @placeholder {
+      <h1>Loading...</h1>
+      }
     </div>
   </div>
 
   <div class="container-projects">
     <h1>Projetos</h1>
     <div class="content-projects">
-      <div class="project">
+      @defer (on viewport) {
+      <div class="project visible">
         <a
           href="https://isantanaah.github.io/inverted-world/"
           target="_blank"
@@ -148,7 +153,7 @@
         <h2>Mundo Invertido</h2>
         <p>Desafio Semana Front-end DIO, feito com HTML, CSS e Javascript</p>
       </div>
-      <div class="project">
+      <div class="project visible">
         <a
           href="https://isantanaah.github.io/nubank-site/"
           target="_blank"
@@ -169,7 +174,7 @@
           pessoal.
         </p>
       </div>
-      <div class="project">
+      <div class="project visible">
         <a
           href="https://estrelaguia.vercel.app/"
           target="_blank"
@@ -188,7 +193,7 @@
         <p>Blog de um freelance feito com NextJS, PostgreSQL e NodeJS.</p>
       </div>
 
-      <div class="project">
+      <div class="project visible">
         <a
           href="https://isantanaah.github.io/senhor_lei/"
           target="_blank"
@@ -207,7 +212,7 @@
         <p>Site desenvolvido com HTML e CSS usando o efeito Parallax.</p>
       </div>
 
-      <div class="project">
+      <div class="project visible">
         <a
           href="https://isantanaah.github.io/lanchonete/"
           target="_blank"
@@ -229,7 +234,7 @@
         </p>
       </div>
 
-      <div class="project">
+      <div class="project visible">
         <a
           href="https://github.com/iSantanaaH/CalculatorIMC"
           target="_blank"
@@ -250,6 +255,11 @@
           aprimorar minhas habilidades em comunição do front-end com o back-end
         </p>
       </div>
+      } @placeholder {
+      <p></p>
+      } @loading {
+      <p class="disableElement"></p>
+      }
     </div>
     <div class="style-border-projects"></div>
   </div>
