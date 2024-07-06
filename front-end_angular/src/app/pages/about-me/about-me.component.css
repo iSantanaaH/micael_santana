@@ -376,6 +376,18 @@
   width: 30rem;
   padding-bottom: 10rem;
 }
+.courses-formations .formations,
+.courses-formations .experiences,
+.courses-formations .courses {
+  transform: translateX(-100%);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+  opacity: 0;
+}
+.courses-formations .formations.visible,
+.courses-formations .experiences.visible,
+.courses-formations .courses.visible {
+  animation: animationLazy 1.5s forwards;
+}
 .courses .flex-courses,
 .experiences .flex-experiences,
 .formations .flex-formations {
