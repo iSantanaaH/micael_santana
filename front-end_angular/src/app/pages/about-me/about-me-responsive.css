@@ -1,3 +1,14 @@
+@keyframes animationLazy {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 @media only screen and (min-width: 1px) and (max-width: 767px) {
   .about-me .title-about,
   .container-skills h1 {
@@ -62,6 +73,14 @@
   }
   .content-skills {
     max-width: calc(100% - 2rem);
+  }
+  .container-skills .content-skills {
+    transform: translateX(-100%);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+    opacity: 0;
+  }
+  .container-skills .content-skills.visible {
+    animation: animationLazy 1.5s forwards;
   }
   .content-skills .skill {
     width: 6.5rem;

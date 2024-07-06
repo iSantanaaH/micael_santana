@@ -55,8 +55,8 @@
 
   <div class="container-skills">
     <h1>Habilidades</h1>
-    <div class="content-skills">
-      @defer (on viewport) {
+    @defer (on viewport) {
+    <div class="content-skills visible">
       <div class="skill">
         <h4>Angular</h4>
         <img src="/assets/Images/angular.svg" loading="lazy" alt="Angular" />
@@ -125,10 +125,10 @@
         <h4>Git</h4>
         <img src="/assets/Images/git.svg" loading="lazy" alt="Git" />
       </div>
-      } @placeholder {
-      <h1>Loading...</h1>
-      }
     </div>
+    } @placeholder {
+    <p></p>
+    }
   </div>
 
   <div class="container-projects">
