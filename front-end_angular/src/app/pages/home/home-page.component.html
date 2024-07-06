@@ -1,5 +1,28 @@
-<header>
-  <app-header-home />
+<header class="header">
+  <nav class="nav-bar">
+    <ul class="list-items">
+      <div class="container-search">
+        <li class="item">
+          <a href="/">Micael <span> Santana </span></a>
+          <input type="text" placeholder="search..." />
+          <button type="button">
+            <img src="/assets/Images/procurar.svg" alt="imagem de uma lupa" />
+          </button>
+        </li>
+      </div>
+      <div class="container-auth">
+        <li class="item">
+          <a href="/auth-user/cadastro">Crie sua conta</a>
+          <a href="/auth-user/login">Entre</a>
+          <!-- 
+          Aparecerá condicionalmente, conforme autenticação    
+          <img src="" alt="foto do usuário" />
+          <img src="/assets/Images/saida.png" alt="sair da conta" />
+          -->
+        </li>
+      </div>
+    </ul>
+  </nav>
 </header>
 
 <main class="main">
@@ -89,6 +112,16 @@
   </section>
 </main>
 
-<footer>
-  <app-footer-home />
+<footer class="footer">
+  <div class="content-form">
+    <h1>Fique por dentro das novidades</h1>
+    <form>
+      <input type="email" placeholder="digite seu email" />
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+  <div>
+    <p class="name">Micael <span class="surname">Santana</span></p>
+    <p><span class="copy">&copy;</span> Todos os direitos reservados</p>
+  </div>
 </footer>

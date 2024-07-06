@@ -1,0 +1,248 @@
+.header {
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .nav-bar {
+    padding: 1rem;
+    background: var(--gray100);
+  }
+
+  .list-items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .item {
+    display: flex;
+    list-style: none;
+    gap: 0.8rem;
+  }
+
+  .container-auth,
+  .container-search {
+    display: flex;
+    align-items: center;
+  }
+
+  .container-search {
+    margin-left: 3.5rem;
+    position: relative;
+  }
+
+  .container-search a {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--pictonBlue);
+    text-decoration: none;
+  }
+
+  .container-search input {
+    border-radius: 0.5rem;
+    border: 0.1rem solid transparent;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    width: 18rem;
+    position: relative;
+    padding-right: 2.5rem;
+  }
+
+  .container-search button {
+    right: 0.5rem;
+    top: 0.5rem;
+    position: absolute;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .container-search img {
+    width: 1.5rem;
+    height: 1.3rem;
+  }
+
+  .container-search input:focus {
+    outline: none;
+    border: 0.1rem solid var(--aeroBlue);
+  }
+
+  .container-search a span {
+    color: var(--esmerald);
+  }
+
+  .container-auth {
+    margin-right: 3.5rem;
+  }
+
+  .container-auth a {
+    color: var(--pictonBlue);
+  }
+
+  .container-auth img {
+    width: 1.5rem;
+    height: 1.3rem;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  margin: 0 auto;
+  width: calc(100vw - 10rem);
+  overflow: hidden;
+}
+
+.container-flex {
+  display: flex;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+.container-flex img {
+  width: 30rem;
+  height: 20rem;
+  border-radius: 0.3rem;
+  filter: drop-shadow(0.1rem 0.1rem 0.1rem var(--black900));
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  width: 33rem;
+}
+
+.post p {
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  color: var(--gray700);
+}
+
+.post h1 a {
+  text-decoration: none;
+  color: var(--black900);
+  transition: color 0.2s ease-in-out;
+}
+
+.post h1 a:hover {
+  cursor: pointer;
+  color: var(--black800);
+}
+
+.post h1 {
+  margin-top: 0.4rem;
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+
+.post .created {
+  cursor: pointer;
+  color: var(--pictonBlue);
+  transition: color 0.2s ease-in-out;
+}
+
+.post .created:hover {
+  color: var(--mayaBlue);
+}
+
+.post .date {
+  color: var(--blue900);
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.post .date:hover {
+  color: var(--gray200);
+}
+
+.container-flex .post p {
+  width: 100%;
+}
+
+.footer {
+  background: var(--gray100);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 4rem;
+
+  & div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+  .content-form h1 {
+    color: var(--black900);
+    transition: color 0.2s ease-in-out;
+    font-size: 2.3rem;
+    font-weight: 400;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .content-form form {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .content-form h1:hover {
+    color: var(--black800);
+  }
+
+  .content-form input {
+    width: 35rem;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    border: 0.1rem solid transparent;
+    font-size: 1.1rem;
+    color: var(--blue900);
+    box-sizing: border-box;
+    height: 2.7rem;
+  }
+
+  .content-form button {
+    width: 10rem;
+    height: 2.7rem;
+    border: none;
+    border-radius: 0.2rem;
+    background: var(--mayaBlue);
+    font-size: 1.1rem;
+    color: var(--gray100);
+    cursor: pointer;
+    transition: color 0.4s ease-in-out, background 0.4s ease-in-out;
+  }
+
+  .content-form button:hover {
+    color: var(--whiteFull);
+    background: var(--blue150);
+  }
+
+  div input:focus {
+    outline: none;
+    border: 0.1rem solid var(--pictonBlue);
+    box-sizing: border-box;
+  }
+
+  div .name {
+    color: var(--pictonBlue);
+  }
+
+  .surname {
+    color: var(--esmerald);
+  }
+
+  .copy {
+    color: var(--black900);
+    font-size: 1.2rem;
+  }
+
+  div p {
+    color: var(--gray700);
+    font-size: 1.1rem;
+  }
+}
