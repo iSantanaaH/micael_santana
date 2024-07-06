@@ -142,9 +142,11 @@
           rel="noopener noreferrer"
         >
           <img
-            loading="lazy"
-            src="/assets/Images/inverted-world.png"
+            ngSrc="/assets/Images/inverted-world.png"
             alt="Mundo Invertido"
+            width="1900"
+            height="949"
+            priority
           />
         </a>
         <p class="created">
@@ -159,11 +161,7 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
-            loading="lazy"
-            src="/assets/Images/copy-nubank.png"
-            alt="Nubank"
-          />
+          <img src="/assets/Images/copy-nubank.png" alt="Nubank" />
         </a>
         <p class="created">
           Criado em: <span class="date">Junho, 7 2023</span>
@@ -181,9 +179,11 @@
           rel="noopener noreferrer"
         >
           <img
-            loading="lazy"
-            src="/assets/Images/blog-star-guide.png"
+            ngSrc="/assets/Images/blog-star-guide.png"
             alt="Estrela Guia"
+            width="1902"
+            height="950"
+            priority
           />
         </a>
         <p class="created">
@@ -200,9 +200,11 @@
           rel="noopener noreferrer"
         >
           <img
-            loading="lazy"
-            src="/assets/Images/sir-law.png"
+            ngSrc="/assets/Images/sir-law.png"
             alt="Senhor da Lei"
+            width="1900"
+            height="955"
+            priority
           />
         </a>
         <p class="created">
@@ -219,9 +221,11 @@
           rel="noopener noreferrer"
         >
           <img
-            loading="lazy"
-            src="/assets/Images/happy-snacks.png"
+            ngSrc="/assets/Images/happy-snacks.png"
             alt="Happy Lanches"
+            width="1893"
+            height="954"
+            priority
           />
         </a>
         <p class="created">
@@ -241,9 +245,11 @@
           rel="noopener noreferrer"
         >
           <img
-            loading="lazy"
-            src="/assets/Images/calculatorImc.png"
+            ngSrc="/assets/Images/calculatorImc.png"
             alt="Calculadora de IMC"
+            width="1883"
+            height="915"
+            priority
           />
         </a>
         <p class="created">
@@ -257,14 +263,13 @@
       </div>
       } @placeholder {
       <p></p>
-      } @loading {
-      <p class="disableElement"></p>
       }
     </div>
     <div class="style-border-projects"></div>
   </div>
 
   <div class="courses-formations">
+    @defer (on viewport; ) {
     <div class="formations">
       <h1>Formações</h1>
       <div class="flex-formations">
@@ -390,5 +395,8 @@
         </div>
       </div>
     </div>
+    } @placeholder {
+    <p></p>
+    }
   </div>
 </section>
