@@ -3,10 +3,9 @@ import { SwiperSlideHomeComponent } from '../../components/swiper-slide/swiper-h
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({
-  selector: 'app-home-page',
-  standalone: true,
-  imports: [SwiperSlideHomeComponent, NgOptimizedImage],
-  templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.css', './home-page-responsive.css'],
+    selector: 'app-home-page',
+    imports: [SwiperSlideHomeComponent, NgOptimizedImage],
+    templateUrl: './home-page.component.html',
+    styleUrls: ['./home-page.component.css', './home-page-responsive.css']
 })
 export default class HomePageComponent {}
