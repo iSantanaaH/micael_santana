@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --output-path docs",
+    "build": "ng build --configuration production --output-path docs --base-href /micael_santana/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:front-end_angular": "node dist/front-end_angular/server/server.mjs"
