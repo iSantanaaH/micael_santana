@@ -172,3 +172,114 @@
     top: 2.4rem;
   }
 }
+
+@media only screen and (min-width: 1024px) {
+  .about-me .style-border {
+    width: 50%;
+    margin: 3rem auto;
+    border-radius: 0.2rem;
+  }
+  .about-me .title-about {
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: 500;
+    padding-top: 1.5rem;
+  }
+  .my-image img {
+    height: 50vh;
+  }
+  .info {
+    width: calc(100% - 11rem);
+    margin: 3rem auto;
+    height: 40vh;
+  }
+  .content-informations {
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .info .title-personal-informations {
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+    font-size: 1.8rem;
+  }
+  .description {
+    width: 38vw;
+    grid-column: 1;
+  }
+  .description div {
+    gap: 1rem;
+  }
+  .description button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: 0 0;
+    border: 0.1rem solid var(--esmerald);
+    color: var(--whiteFull);
+    border-radius: 2rem;
+    width: 14rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    padding: 0.7rem;
+    margin-top: 1rem;
+  }
+  .container-boxes {
+    gap: 1.5rem;
+    grid-column: 2;
+  }
+  .box {
+    gap: 1rem;
+    width: 25rem;
+    border-radius: 0.3rem;
+  }
+  .box h1 {
+    font-size: 3rem;
+    padding: 1rem;
+  }
+  .box p {
+    font-size: 1.2rem;
+  }
+  .container-skills h1 {
+    font-size: 3.2rem;
+  }
+  .about-me,
+  .who-i-am,
+  .container-skills,
+  .container-projects,
+  .courses-formations {
+    min-height: 80vh;
+  }
+  .content-skills {
+    gap: 2rem;
+    padding: 0.5rem;
+    max-width: calc(100% - 11rem);
+    margin-top: 3.5rem;
+  }
+  .content-skills .skill {
+    gap: 0.4rem;
+    width: 8.5rem;
+  }
+  .content-skills .skill h4 {
+    font-size: 1rem;
+  }
+  .content-skills .skill img {
+    width: 2.5rem;
+  }
+  .container-projects h1 {
+    font-size: 3.2rem;
+  }
+  .project {
+    gap: 0.7rem;
+    max-width: 30rem;
+  }
+  .courses-formations .experiences,
+  .courses-formations .formations {
+    flex-direction: column;
+    gap: 1.2rem;
+    grid-row: 1;
+    width: 30rem;
+    display: flex;
+  }
+}
