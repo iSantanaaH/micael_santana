@@ -1,21 +1,44 @@
-<header class="header"></header>
+<header class="header">
+  <nav>
+    <ul class="links-to-navigate">
+      <li>
+        <a href="#home">Home</a>
+      </li>
+      <li>
+        <a href="#about-me">Sobre</a>
+      </li>
+      <li>
+        <a href="#skills">Habilidade</a>
+      </li>
+      <li>
+        <a href="#projects">Projetos</a>
+      </li>
+      <li>
+        <a href="#trajectory">Trajetoria</a>
+      </li>
+    </ul>
+  </nav>
+</header>
 
 <main class="main">
-  <article class="who-i-am">
+  <section class="who-i-am" id="home">
     <div class="content-me">
       <h2>
-        Sou Micael Santana, tenho {{ calcMyAge() }} anos, casado, cristão e
-        desenvolvedor fullstack. Sou apaixonado por Tecnologia e constantemente
-        venho tentando aprender mais. Gosto de desafios e sou focado
+        Sou <span class="blue-name">Micael </span>
+        <span class="green-name">Santana</span>, tenho {{ calcMyAge() }} anos,
+        casado, cristão e desenvolvedor fullstack. Gosto de Tecnologia e
+        constantemente venho tentando aprender mais. Gosto de desafios e sou
+        focado
       </h2>
 
       <figure class="my-image">
         <img src="/assets/Images/micael3.jpg" alt="minha foto" />
       </figure>
     </div>
-  </article>
+    <div class="style-border"></div>
+  </section>
 
-  <div class="about-me">
+  <section class="about-me" id="about-me">
     <h1 class="title-about">Sobre <span> Mim</span></h1>
     <div class="info">
       <h2 class="title-personal-informations">Informações Pessoais</h2>
@@ -63,9 +86,9 @@
       </article>
     </div>
     <div class="style-border"></div>
-  </div>
+  </section>
 
-  <div class="container-skills">
+  <section class="container-skills" id="skills">
     <h1>Habilidades</h1>
     @defer (on viewport) {
     <div class="content-skills visible">
@@ -141,9 +164,10 @@
     } @placeholder {
     <p></p>
     }
-  </div>
+    <div class="style-border"></div>
+  </section>
 
-  <div class="container-projects">
+  <section class="container-projects" id="projects">
     <h1>Projetos</h1>
     <div class="content-projects">
       @defer (on viewport) {
@@ -283,10 +307,10 @@
       <p></p>
       }
     </div>
-    <div class="style-border-projects"></div>
-  </div>
+    <div class="style-border"></div>
+  </section>
 
-  <div class="courses-formations">
+  <section class="courses-formations" id="trajectory">
     @defer (on viewport) {
     <div class="formations visible">
       <h1>Formações</h1>
@@ -416,7 +440,7 @@
     } @placeholder {
     <p></p>
     }
-  </div>
+  </section>
 </main>
 
 <footer class="footer"></footer>

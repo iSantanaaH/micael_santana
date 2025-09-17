@@ -206,6 +206,14 @@
 }
 
 @media only screen and (min-width: 1024px) {
+  .links-to-navigate {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--esmerald);
+  }
+
   .about-me .style-border {
     width: 50%;
     margin: 3rem auto;
@@ -224,7 +232,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    width: 100vw;
+    width: 90vw;
     border-radius: 100%;
     aspect-ratio: 1/1;
     cursor: pointer;
@@ -239,11 +247,11 @@
     object-fit: cover;
     z-index: 2;
   }
-
+  /* 
   .my-image,
   .content-me h2 {
     margin-top: 7rem;
-  }
+  } */
 
   .info {
     width: calc(100% - 11rem);
@@ -310,14 +318,6 @@
 
   .container-skills h1 {
     font-size: 3.2rem;
-  }
-
-  .about-me,
-  .who-i-am,
-  .container-skills,
-  .container-projects,
-  .courses-formations {
-    min-height: 80vh;
   }
 
   .content-skills {

@@ -1,3 +1,11 @@
+ul li {
+  list-style: none;
+}
+
+section {
+  scroll-margin-top: 8rem;
+}
+
 @keyframes animationLazy {
   from {
     transform: translateX(-100%);
@@ -10,10 +18,34 @@
   }
 }
 
+.links-to-navigate {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.links-to-navigate a {
+  color: var(--whiteFull);
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.blue-name {
+  color: var(--pictonBlue);
+}
+
+.green-name {
+  color: var(--esmerald);
+}
+
 .main {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   background: var(--black900);
   box-sizing: border-box;
+  padding-top: 12rem;
+  gap: 3rem;
 }
 
 .disableElement {
@@ -25,8 +57,9 @@
   align-items: center;
   justify-content: center;
   gap: 4rem;
-  width: 50vw;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 60rem;
+  margin: 0rem auto;
 }
 
 .content-informations,
@@ -73,8 +106,11 @@
   width: 2rem;
 }
 
-.about-me .style-border {
-  border-bottom: 0.1rem solid var(--gray200);
+.style-border {
+  border-bottom: 0.15rem solid var(--gray200);
+  width: 50%;
+  margin: 6rem auto;
+  border-radius: 0.2rem;
 }
 
 .about-me .title-about {
@@ -87,7 +123,8 @@
 
 .description p,
 .who-i-am h2 {
-  color: var(--gray700);
+  color: var(--whiteFull);
+  cursor: pointer;
 }
 
 .description span {
@@ -242,13 +279,6 @@
 
 .content-skills .skill img {
   height: auto;
-}
-
-.container-projects .style-border-projects {
-  border-bottom: 0.1rem solid var(--gray200);
-  width: 50%;
-  margin: 5rem auto;
-  border-radius: 0.2rem;
 }
 
 .content-projects {
