@@ -18,16 +18,30 @@ section {
   }
 }
 
-.links-to-navigate {
+.header {
   position: fixed;
   width: 100%;
   z-index: 100;
+  background: var(--esmerald);
 }
 
-.links-to-navigate a {
+.desktop-menu {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.desktop-menu a {
   color: var(--whiteFull);
   text-decoration: none;
   font-size: 1.3rem;
+}
+
+.about-me .style-border {
+  width: 50%;
+  margin: 3rem auto;
+  border-radius: 0.2rem;
 }
 
 .blue-name {
@@ -75,11 +89,30 @@ section {
 }
 
 .content-skills .skill,
-.project img,
-.my-image {
+.project img {
   transition: 0.2s;
   aspect-ratio: 1;
   cursor: pointer;
+}
+
+.my-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 100%;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.my-image:hover {
+  transform: scale(1.1);
+}
+
+.my-image img {
+  object-fit: cover;
+  z-index: 2;
 }
 
 .content-informations,
@@ -113,11 +146,12 @@ section {
   border-radius: 0.2rem;
 }
 
-.about-me .title-about {
+.title-about {
+  text-align: center;
   color: var(--pictonBlue);
 }
 
-.about-me .title-about span {
+.title-about span {
   color: var(--esmerald);
 }
 
@@ -141,19 +175,23 @@ section {
   flex-direction: column;
 }
 
-.description button {
+.download-pdf-button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: 0 0;
   border: 0.1rem solid var(--esmerald);
   color: var(--whiteFull);
+  border-radius: 2rem;
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  padding: 0.7rem;
+  margin-top: 1rem;
 }
 
-.description button::after,
-.description button::before {
+.download-pdf-button::after,
+.download-pdf-button::before {
   right: 0;
   height: 100%;
   background: var(--esmerald);
@@ -168,26 +206,26 @@ section {
   color: var(--pictonBlue);
 }
 
-.description button::after {
+.download-pdf-button::after {
   width: 3.3rem;
 }
 
-.description button::before {
+.download-pdf-button::before {
   width: 0%;
   transition: 0.5s;
 }
 
-.description button:hover::before {
+.download-pdf-button:hover::before {
   width: 100%;
 }
 
-.description button span {
+.download-pdf-button span {
   font-size: 0.9rem;
   z-index: 1;
   position: relative;
 }
 
-.description button img {
+.download-pdf-button img {
   width: 1.6rem;
   z-index: 2;
 }
@@ -301,6 +339,10 @@ section {
   aspect-ratio: 2/1;
   border-radius: 0.5rem;
   box-sizing: border-box;
+}
+
+.project img:hover {
+  transform: scale(1.03);
 }
 
 .project {
