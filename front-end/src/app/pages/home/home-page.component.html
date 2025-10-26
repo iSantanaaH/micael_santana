@@ -1,21 +1,28 @@
 <header class="header">
-  <nav>
-    <ul class="links-to-navigate">
+  @if (this.isMobileMenuOpen) {
+  <div class="disable-menu-mobile"></div>
+
+  <ul class="mobile-menu">
+    <h1>Micael <span>Santana</span></h1>
+    @for (link of navLinks; track link.id) {
+    <li>
+      <a [href]="'#' + link.label">{{ link.id }}</a>
+    </li>
+    }
+  </ul>
+  }
+  <nav class="menu-navigate">
+    <div class="menu-icon" id="menu-icon">
+      <p class="icon" (click)="toggleMobileMenu($event)">☰</p>
+      <p class="name">Micael <span>Santana</span></p>
+    </div>
+
+    <ul class="desktop-menu">
+      @for (link of navLinks; track link.id) {
       <li>
-        <a href="#home">Home</a>
+        <a [href]="'#' + link.label">{{ link.id }}</a>
       </li>
-      <li>
-        <a href="#about-me">Sobre</a>
-      </li>
-      <li>
-        <a href="#skills">Habilidade</a>
-      </li>
-      <li>
-        <a href="#projects">Projetos</a>
-      </li>
-      <li>
-        <a href="#trajectory">Trajetoria</a>
-      </li>
+      }
     </ul>
   </nav>
 </header>
@@ -25,14 +32,12 @@
     <div class="content-me">
       <h2>
         Sou <span class="blue-name">Micael </span>
-        <span class="green-name">Santana</span>, tenho {{ calcMyAge() }} anos,
-        casado, cristão e desenvolvedor fullstack. Gosto de Tecnologia e
-        constantemente venho tentando aprender mais. Gosto de desafios e sou
-        focado
+        <span class="green-name">Santana</span>, A fé me guia, a tecnologia me
+        inspira e os desafios me impulsionam a evoluir todos os dias.
       </h2>
 
       <figure class="my-image">
-        <img src="/assets/Images/micael3.jpg" alt="minha foto" />
+        <img src="/assets/Images/eu3.png" alt="minha foto" />
       </figure>
     </div>
     <div class="style-border"></div>
@@ -61,7 +66,7 @@
           </div>
 
           <a href="/assets/Documents/curriculo.pdf" download="curriculo.pdf">
-            <button>
+            <button class="download-pdf-button">
               <span>Baixar Currículo</span>
               <div>
                 <img src="/assets/Images/download.svg" alt="" />
