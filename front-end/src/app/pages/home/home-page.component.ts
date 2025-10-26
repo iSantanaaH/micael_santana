@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home-page',
+  standalone: true,
   imports: [NgOptimizedImage],
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.css', './home-page-responsive.css'],
@@ -23,5 +24,20 @@ export default class HomePageComponent {
     }
 
     return age;
+  }
+
+  navLinks = [
+    { id: 'Home', label: 'home' },
+    { id: 'Sobre', label: 'about-me' },
+    { id: 'Habilidades', label: 'skills' },
+    { id: 'Projetos', label: 'projects' },
+    { id: 'Trajetoria', label: 'trajectory' },
+  ];
+
+  isMobileMenuOpen: boolean = false;
+
+  toggleMobileMenu(event: Event): void {
+    event.stopPropagation();
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
   }
 }
