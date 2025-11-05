@@ -1,5 +1,5 @@
 import { NgOptimizedImage } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, effect, signal } from '@angular/core';
 
 @Component({
   selector: 'app-home-page',
@@ -9,6 +9,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./home-page.component.css', './home-page-responsive.css'],
 })
 export default class HomePageComponent {
+  constructor() {
+    effect(() => {
+      document.body.style.overflow = this.isMobileMenuOpen() ? 'hidden' : '';
+    });
+  }
+
   calcMyAge(): number {
     const currentDate = new Date();
     const currentYear = currentDate.getFullYear();
@@ -46,10 +52,10 @@ export default class HomePageComponent {
     },
   ];
 
-  isMobileMenuOpen: boolean = false;
+  isMobileMenuOpen = signal(false);
 
-  toggleMobileMenu(event: Event): void {
+  toggleMobileMenu(event: MouseEvent): void {
     event.stopPropagation();
-    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    this.isMobileMenuOpen.update((isOpen) => !isOpen);
   }
 }
