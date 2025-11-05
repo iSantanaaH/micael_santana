@@ -167,6 +167,7 @@
 
   .content-me img {
     width: calc(100% - 4rem);
+    max-width: 30rem;
   }
 
   .content-me img:hover {
@@ -197,12 +198,30 @@
 
   .description {
     display: flex;
-    flex-direction: column;
-    width: calc(100% - 3rem);
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: calc(100% - 2rem);
+    gap: 1rem;
   }
 
-  .description div {
-    margin-bottom: 0.6rem;
+  .description a {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  .description .download-pdf-button {
+    flex-grow: 1;
+  }
+
+  .description .informations-1 p,
+  .description .informations-2 p {
+    font-size: 0.8rem;
+  }
+
+  .description .informations-1 span,
+  .description .informations-2 span {
+    font-size: 0.83rem;
   }
 
   .content-skills .skill h4,
@@ -221,6 +240,8 @@
   }
 
   .container-boxes {
+    display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
   }
 
@@ -229,8 +250,9 @@
     gap: 0.4rem;
     justify-content: center;
     width: 14rem;
-    height: 5rem;
+    height: 3rem;
     margin: 0 auto;
+    padding: 1rem;
   }
 
   .container-projects,
@@ -429,6 +451,7 @@
   .container-boxes {
     gap: 1.5rem;
     grid-column: 2;
+    flex-wrap: wrap;
   }
 
   .box {

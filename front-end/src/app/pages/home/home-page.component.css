@@ -223,7 +223,6 @@ section {
 
 .container-boxes {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .box {
