@@ -1,24 +1,36 @@
 <header class="header">
-  @if (this.isMobileMenuOpen) {
+  <nav class="mobile-header">
+    <article>
+      <div class="menu-icon-desktop" id="menu-icon">
+        <button class="icon-burguer" (click)="toggleMobileMenu($event)">
+          ☰
+        </button>
+        <p class="name">Micael <span>Santana</span></p>
+      </div>
+    </article>
+  </nav>
+
+  @if (isMobileMenuOpen()) {
   <div class="disable-menu-mobile" (click)="toggleMobileMenu($event)"></div>
 
-  <ul class="mobile-menu">
-    <h1>Micael <span>Santana</span></h1>
-    @for (link of navLinks; track link.id) {
-    <li>
-      <img [src]="link.icon" alt="ícones" />
-      <a [href]="'#' + link.label">{{ link.id }}</a>
-    </li>
-    }
-  </ul>
+  <nav
+    class="mobile-navigate"
+    animate.enter="enter-animation"
+    animate.leave="leave-animation"
+  >
+    <ul class="mobile-menu">
+      <h1>Micael <span>Santana</span></h1>
+      @for (link of navLinks; track link.id) {
+      <li>
+        <img [src]="link.icon" alt="ícones" />
+        <a [href]="'#' + link.label">{{ link.id }}</a>
+      </li>
+      }
+    </ul>
+  </nav>
   }
 
   <nav class="menu-navigate">
-    <div class="menu-icon-desktop" id="menu-icon">
-      <p class="icon-burguer" (click)="toggleMobileMenu($event)">☰</p>
-      <p class="name">Micael <span>Santana</span></p>
-    </div>
-
     <ul class="desktop-menu">
       @for (link of navLinks; track link.id) {
       <li>
@@ -38,8 +50,8 @@
         inspira e os desafios me impulsionam a evoluir todos os dias.
       </h2>
 
-      <figure class="my-image">
-        <img src="/assets/Images/eu3.png" alt="minha foto" />
+      <figure class="container-image">
+        <img src="/assets/Images/my-images/eu.png" alt="minha foto" />
       </figure>
     </div>
     <div class="style-border"></div>
