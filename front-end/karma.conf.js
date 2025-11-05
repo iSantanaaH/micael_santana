@@ -12,14 +12,20 @@ module.exports = function (config) {
     ],
     client: {
       jasmine: {},
-      clearContext: false, // deixa o output visível no navegador
+      clearContext: false,
     },
     reporters: ["progress", "kjhtml"],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ["ChromiumHeadless"], // 👈 roda sem abrir janela
+    browsers: ["ChromiumHeadless"],
+    customLaunchers: {
+      ChromiumHeadless: {
+        base: "Chromium",
+        flags: ["--headless", "no-sandbox", "-disable-gpu"],
+      },
+    },
     singleRun: false,
     restartOnFileChange: true,
   });
