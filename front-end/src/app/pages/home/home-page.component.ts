@@ -33,22 +33,22 @@ export default class HomePageComponent {
   }
 
   navLinks = [
-    { id: 'Home', label: 'home', icon: 'assets/Images/icons/home.svg' },
-    { id: 'Sobre', label: 'about-me', icon: 'assets/Images/icons/info.svg' },
+    { id: 'Home', label: 'home', icon: 'assets/Images/ui-icons/home.svg' },
+    { id: 'Sobre', label: 'about-me', icon: 'assets/Images/ui-icons/info.svg' },
     {
       id: 'Habilidades',
       label: 'skills',
-      icon: 'assets/Images/icons/rocket.svg',
+      icon: 'assets/Images/ui-icons/rocket.svg',
     },
     {
       id: 'Projetos',
       label: 'projects',
-      icon: 'assets/Images/icons/project.svg',
+      icon: 'assets/Images/ui-icons/project.svg',
     },
     {
       id: 'Trajetoria',
       label: 'trajectory',
-      icon: 'assets/Images/icons/map.svg',
+      icon: 'assets/Images/ui-icons/map.svg',
     },
   ];
 

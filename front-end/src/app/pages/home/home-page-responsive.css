@@ -255,10 +255,9 @@
     padding: 1rem;
   }
 
-  .container-projects,
-  .container-skills {
-    width: 100%;
+  .content-skills {
     display: flex;
+    gap: 1rem;
   }
 
   .box h1 {
@@ -267,10 +266,6 @@
 
   .box p {
     font-size: 1rem;
-  }
-
-  .content-skills {
-    max-width: calc(100% - 2rem);
   }
 
   .container-skills .content-skills {
