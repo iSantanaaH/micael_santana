@@ -47,12 +47,6 @@ section {
   font-size: 1.3rem;
 }
 
-.about-me .style-border {
-  width: 50%;
-  margin: 3rem auto;
-  border-radius: 0.2rem;
-}
-
 .blue-name {
   color: var(--pictonBlue);
 }
@@ -290,7 +284,7 @@ section {
   content: "";
   width: 100%;
   height: 0.24rem;
-  background: linear-gradient(to right, var(--white900), var(--pictonBlue));
+  background: linear-gradient(to right, var(--esmerald), var(--pictonBlue));
   bottom: 0;
   left: 0;
   position: absolute;

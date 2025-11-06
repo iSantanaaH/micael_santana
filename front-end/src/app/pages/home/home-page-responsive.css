@@ -43,8 +43,7 @@
   }
 
   .main {
-    gap: 3rem;
-    padding-top: 6rem;
+    padding-top: 3rem;
   }
 
   .desktop-menu {
@@ -155,6 +154,7 @@
   .content-me {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 3rem;
   }
 
@@ -194,11 +194,13 @@
   .content-informations {
     display: flex;
     flex-direction: column;
+    gap: 3rem;
   }
 
   .description {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-between;
     margin: 0 auto;
     width: calc(100% - 2rem);
@@ -207,7 +209,8 @@
 
   .description a {
     display: flex;
-    flex-grow: 1;
+    width: 60%;
+    margin: 0 auto;
   }
 
   .description .download-pdf-button {
@@ -236,7 +239,12 @@
 
   .description button {
     height: 3rem;
-    margin: 1rem 0 3rem;
+    /* margin: 1rem 0 3rem; */
+  }
+
+  .documents-links {
+    display: flex;
+    gap: 0.5rem;
   }
 
   .container-boxes {
