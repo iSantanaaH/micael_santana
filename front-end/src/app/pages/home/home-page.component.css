@@ -29,9 +29,10 @@ section {
 }
 
 .header {
-  /* position: fixed; */
+  position: fixed;
   width: 100%;
   background: var(--esmerald);
+  z-index: 100;
 }
 
 .desktop-menu {

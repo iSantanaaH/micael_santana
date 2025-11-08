@@ -1,5 +1,5 @@
-import { NgOptimizedImage } from '@angular/common';
-import { Component, effect, signal } from '@angular/core';
+import { isPlatformBrowser, NgOptimizedImage } from '@angular/common';
+import { Component, effect, Inject, PLATFORM_ID, signal } from '@angular/core';
 
 @Component({
   selector: 'app-home-page',
@@ -9,9 +9,11 @@ import { Component, effect, signal } from '@angular/core';
   styleUrls: ['./home-page.component.css', './home-page-responsive.css'],
 })
 export default class HomePageComponent {
-  constructor() {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
     effect(() => {
-      document.body.style.overflow = this.isMobileMenuOpen() ? 'hidden' : '';
+      if (isPlatformBrowser(this.platformId)) {
+        document.body.style.overflow = this.isMobileMenuOpen() ? 'hidden' : '';
+      }
     });
   }
 
