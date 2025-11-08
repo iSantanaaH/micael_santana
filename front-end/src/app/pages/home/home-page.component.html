@@ -23,7 +23,9 @@
       @for (link of navLinks; track link.id) {
       <li>
         <img [src]="link.icon" alt="ícones" />
-        <a [href]="'#' + link.label">{{ link.id }}</a>
+        <a [href]="'#' + link.label" (click)="toggleMobileMenu($event)">{{
+          link.id
+        }}</a>
       </li>
       }
     </ul>
