@@ -21,11 +21,11 @@
   }
 }
 
-.enter-animation {
+.enter-in-screen-animation {
   animation: mobileMenuFadeIn 1.5s forwards;
 }
 
-.leave-animation {
+.leave-off-screen-animation {
   animation: mobileMenuFadeOut 1.5s forwards;
 }
 
@@ -138,7 +138,7 @@
   }
 
   .name span {
-    color: var(--green500);
+    color: var(--whiteFull);
   }
 
   .mobile-menu a {
@@ -175,10 +175,11 @@
   }
 
   .about-me .title-about,
-  .container-skills h1 {
+  .container-skills h1,
+  .about-me h1,
+  .container-projects h1 {
     font-size: 2rem;
-    padding-top: 1rem;
-    text-align: center;
+    font-weight: 700;
   }
 
   .info {
@@ -239,7 +240,6 @@
 
   .description button {
     height: 3rem;
-    /* margin: 1rem 0 3rem; */
   }
 
   .documents-links {
@@ -276,16 +276,6 @@
     font-size: 1rem;
   }
 
-  .container-skills .content-skills {
-    transform: translateX(-100%);
-    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
-    opacity: 0;
-  }
-
-  .container-skills .content-skills.visible {
-    animation: mobileMenuFadeIn 1.5s forwards;
-  }
-
   .content-skills .skill {
     width: 6.5rem;
   }
@@ -297,9 +287,23 @@
   .container-projects {
     align-items: center;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
     margin: 0 auto;
+  }
+
+  .content-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: calc(100% - 2rem);
+  }
+
+  .content-projects img {
+    width: 100%;
   }
 
   .courses-formations .courses,
@@ -308,17 +312,6 @@
   .project {
     width: calc(100% - 2rem);
     margin: 0 auto;
-  }
-
-  .container-projects img {
-    height: 14rem;
-    aspect-ratio: 1;
-  }
-
-  .container-projects h1 {
-    font-size: 1.7rem;
-    text-align: center;
-    margin-top: 3rem;
   }
 
   .description-courses .title-courses,
@@ -384,6 +377,20 @@
 }
 
 @media only screen and (min-width: 1024px) {
+  .courses-formations .courses h1,
+  .courses-formations .experiences h1,
+  .courses-formations .formations h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  .about-me h1,
+  .container-skills h1,
+  .container-projects h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
   .main {
     padding-top: 12rem;
     gap: 3rem;
@@ -449,6 +456,7 @@
 
   .download-pdf-button {
     width: 14rem;
+    font-size: 0.9rem;
   }
 
   .container-boxes {
@@ -500,6 +508,15 @@
     font-size: 3.2rem;
   }
 
+  .project h2 {
+    font-size: 1.9rem;
+    font-weight: 600;
+  }
+
+  .project p {
+    font-size: 1rem;
+  }
+
   .project {
     gap: 0.7rem;
     max-width: 30rem;
@@ -512,5 +529,11 @@
     grid-row: 1;
     width: 30rem;
     display: flex;
+  }
+
+  .description-courses .title-courses,
+  .description-experience .title-experience,
+  .description-formation .title-formation {
+    font-size: 1.1rem;
   }
 }

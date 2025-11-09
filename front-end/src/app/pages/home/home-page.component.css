@@ -1,3 +1,34 @@
+@keyframes fadeInScreen {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutScreen {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+.enter-in-screen-animation {
+  animation: fadeInScreen 1.5s forwards;
+}
+
+.leave-off-screen-animation {
+  animation: fadeOutScreen 1.5s forwards;
+}
+
 ul li {
   list-style: none;
 }
@@ -14,18 +45,6 @@ section {
   -webkit-user-drag: none; /* impede o usuário de arrastar */
   -webkit-tap-highlight-color: transparent; /* Remove o highlight azul */
   -webkit-touch-callout: none;
-}
-
-@keyframes animationLazy {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
 }
 
 .header {
@@ -133,10 +152,6 @@ section {
   color: var(--pictonBlue);
 }
 
-.title-about span {
-  color: var(--esmerald);
-}
-
 .description p,
 .who-i-am h2 {
   color: var(--whiteFull);
@@ -202,7 +217,6 @@ section {
 }
 
 .download-pdf-button span {
-  font-size: 0.9rem;
   z-index: 1;
   position: relative;
 }
@@ -231,24 +245,14 @@ section {
   cursor: pointer;
 }
 
-.box h1 {
-  font-weight: 500;
-}
-
 .box p {
   color: var(--esmerald);
 }
 
-.container-skills h1 {
+.container-skills h1,
+.container-projects h1 {
   text-align: center;
-  font-weight: 500;
   color: var(--esmerald);
-}
-
-.container-skills {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .content-skills {
@@ -275,12 +279,6 @@ section {
   position: relative;
 }
 
-.container-projects,
-.project {
-  display: flex;
-  flex-direction: column;
-}
-
 .content-skills .skill::after {
   content: "";
   width: 100%;
@@ -303,14 +301,15 @@ section {
 .content-projects {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 5rem;
 }
 
-.container-projects h1 {
-  margin: 0 auto 3rem auto;
-  font-weight: 500;
+.container-projects h1,
+.container-skills h1 {
   color: var(--esmerald);
+  margin-bottom: 3rem;
 }
 
 .project img {
@@ -320,20 +319,11 @@ section {
   aspect-ratio: 2/1;
   border-radius: 0.5rem;
   box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .project img:hover {
   transform: scale(1.03);
-}
-
-.project {
-  transform: translateX(-100%);
-  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
-  opacity: 0;
-}
-
-.project.visible {
-  animation: animationLazy 1.5s forwards;
 }
 
 .courses-formations .experiences,
@@ -346,7 +336,7 @@ section {
 }
 
 .project h2 {
-  font-size: 1.9rem;
+  margin-top: 0.5rem;
   color: var(--gray200);
   transition: color 0.2s ease-in-out;
 }
@@ -363,7 +353,6 @@ section {
 }
 
 .project p {
-  font-size: 1.1rem;
   color: var(--gray600);
   transition: color 0.2s ease-in-out;
 }
@@ -414,20 +403,6 @@ section {
   grid-row: 2;
   width: 30rem;
   padding-bottom: 10rem;
-}
-
-.courses-formations .formations,
-.courses-formations .experiences,
-.courses-formations .courses {
-  transform: translateX(-100%);
-  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
-  opacity: 0;
-}
-
-.courses-formations .formations.visible,
-.courses-formations .experiences.visible,
-.courses-formations .courses.visible {
-  animation: animationLazy 1.5s forwards;
 }
 
 .courses .flex-courses,
@@ -486,7 +461,6 @@ section {
   color: var(--gray200);
   transition: color 0.2s ease-in-out;
   font-weight: 500;
-  font-size: 1.1rem;
 }
 
 .description-courses .institution,
@@ -499,7 +473,6 @@ section {
 .courses-formations .courses h1,
 .courses-formations .experiences h1,
 .courses-formations .formations h1 {
-  font-size: 2rem;
   font-weight: 500;
   color: var(--esmerald);
   margin-bottom: 1rem;

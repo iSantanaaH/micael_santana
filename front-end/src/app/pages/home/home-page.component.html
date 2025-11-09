@@ -15,8 +15,8 @@
 
   <nav
     class="mobile-navigate"
-    animate.enter="enter-animation"
-    animate.leave="leave-animation"
+    animate.enter="enter-in-screen-animation"
+    animate.leave="leave-off-screen-animation"
   >
     <ul class="mobile-menu">
       <h1>Micael <span>Santana</span></h1>
@@ -60,7 +60,7 @@
   </section>
 
   <section class="about-me" id="about-me">
-    <h1 class="title-about">Sobre <span> Mim</span></h1>
+    <h1 class="title-about">Sobre <span class="green-name"> Mim</span></h1>
     <div class="info">
       <h2 class="title-personal-informations">Informações Pessoais</h2>
       <article class="content-informations">
@@ -127,7 +127,7 @@
   <section class="container-skills" id="skills">
     <h1>Habilidades</h1>
     @defer (on viewport) {
-    <div class="content-skills visible">
+    <div class="content-skills" animate.enter="enter-in-screen-animation">
       <div class="skill">
         <h4>Angular</h4>
         <img
@@ -251,7 +251,7 @@
     <h1>Projetos</h1>
     <div class="content-projects">
       @defer (on viewport) {
-      <div class="project visible">
+      <div class="project" animate.enter="enter-in-screen-animation">
         <a
           href="https://isantanaah.github.io/inverted-world/"
           target="_blank"
@@ -271,7 +271,7 @@
         <h2>Mundo Invertido</h2>
         <p>Desafio Semana Front-end DIO, feito com HTML, CSS e Javascript</p>
       </div>
-      <div class="project visible">
+      <div class="project" animate.enter="enter-in-screen-animation">
         <a
           href="https://isantanaah.github.io/nubank-site/"
           target="_blank"
@@ -294,7 +294,7 @@
           pessoal.
         </p>
       </div>
-      <div class="project visible">
+      <div class="project" animate.enter="enter-in-screen-animation">
         <a
           href="https://estrelaguia.vercel.app/"
           target="_blank"
@@ -315,7 +315,7 @@
         <p>Blog de um freelance feito com NextJS, PostgreSQL e NodeJS.</p>
       </div>
 
-      <div class="project visible">
+      <div class="project" animate.enter="enter-in-screen-animation">
         <a
           href="https://isantanaah.github.io/senhor_lei/"
           target="_blank"
@@ -336,7 +336,7 @@
         <p>Site desenvolvido com HTML e CSS usando o efeito Parallax.</p>
       </div>
 
-      <div class="project visible">
+      <div class="project" animate.enter="enter-in-screen-animation">
         <a
           href="https://isantanaah.github.io/lanchonete/"
           target="_blank"
@@ -360,7 +360,7 @@
         </p>
       </div>
 
-      <div class="project visible">
+      <div class="project" animate.enter="enter-in-screen-animation">
         <a
           href="https://github.com/iSantanaaH/CalculatorIMC"
           target="_blank"
@@ -383,8 +383,9 @@
           aprimorar minhas habilidades em comunição do front-end com o back-end
         </p>
       </div>
+
       } @placeholder {
-      <p></p>
+      <h1>nada renderizou ainda</h1>
       }
     </div>
     <div class="style-border"></div>
@@ -392,7 +393,7 @@
 
   <section class="courses-formations" id="trajectory">
     @defer (on viewport) {
-    <div class="formations visible">
+    <div class="formations" animate.enter="enter-in-screen-animation">
       <h1>Formações</h1>
       <div class="flex-formations">
         <div class="formation">
@@ -413,7 +414,7 @@
         </div>
       </div>
     </div>
-    <div class="experiences visible">
+    <div class="experiences" animate.enter="enter-in-screen-animation">
       <h1>Experiências</h1>
       <div class="flex-experiences">
         <div class="experience">
@@ -432,7 +433,7 @@
         </div>
       </div>
     </div>
-    <div class="courses visible">
+    <div class="courses" animate.enter="enter-in-screen-animation">
       <h1>Cursos</h1>
       <div class="flex-courses">
         <div class="course">
@@ -444,7 +445,7 @@
             />
           </div>
           <div class="description-courses">
-            <p class="date-inity">Em andamento</p>
+            <p class="date-inity">Concluído</p>
             <h2 class="title-courses">Curso de Angular 2 (v17+)</h2>
             <p class="institution">Udemy - Dener Troquatte</p>
           </div>
@@ -458,7 +459,7 @@
             />
           </div>
           <div class="description-courses">
-            <p class="date-inity">Em andamento</p>
+            <p class="date-inity">Concluído</p>
             <h2 class="title-courses">Typescript do básico ao avançado</h2>
             <p class="institution">Udemy - Matheus Battisti</p>
           </div>
@@ -472,7 +473,7 @@
             />
           </div>
           <div class="description-courses">
-            <p class="date-inity">Em andamento</p>
+            <p class="date-inity">Concluído</p>
             <h2 class="title-courses">Node.js do Zero a Maestria</h2>
             <p class="institution">Udemy</p>
           </div>
@@ -486,7 +487,7 @@
             />
           </div>
           <div class="description-courses">
-            <p class="date-inity">Em andamento</p>
+            <p class="date-inity">Concluído</p>
             <h2 class="title-courses">Design de banco de dados</h2>
             <p class="institution">Udemy - Matheus Battisti</p>
           </div>
@@ -500,7 +501,7 @@
             />
           </div>
           <div class="description-courses">
-            <p class="date-inity">Em andamento</p>
+            <p class="date-inity">Concluído</p>
             <h2 class="title-courses">PHP do Zero a Maestria</h2>
             <p class="institution">Udemy - Matheus Battisti</p>
           </div>
@@ -514,7 +515,7 @@
             />
           </div>
           <div class="description-courses">
-            <p class="date-inity">Em andamento</p>
+            <p class="date-inity">Concluído</p>
             <h2 class="title-courses">SQL do básico ao avançado</h2>
             <p class="institution">Udemy - Matheus Battisti</p>
           </div>
