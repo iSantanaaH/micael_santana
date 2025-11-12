@@ -37,9 +37,23 @@ section {
   scroll-margin-top: 8rem;
 }
 
+.about-me h1,
+.container-skills h1,
+.container-projects h1,
+.courses-formations h1 {
+  cursor: pointer;
+}
+
 .container-image,
 .container-image img,
-.content-me h2 {
+.content-me h2,
+.container-skills .skill,
+.about-me h1,
+.container-skills h1,
+.container-projects h1,
+.courses-formations h1,
+.about-me .title-personal-informations,
+.about-me .box {
   user-select: none; /* impede o usuário de selecionar no Android*/
   -moz-user-select: none; /* impede o usuário de selecionar no iOS*/
   -webkit-user-drag: none; /* impede o usuário de arrastar */
@@ -50,7 +64,7 @@ section {
 .header {
   position: fixed;
   width: 100%;
-  background: var(--esmerald);
+  background: var(--pictonBlue);
   z-index: 100;
 }
 
@@ -147,7 +161,8 @@ section {
   border-radius: 0.2rem;
 }
 
-.title-about {
+.title-about,
+.title-personal-informations {
   text-align: center;
   color: var(--pictonBlue);
 }

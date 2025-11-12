@@ -134,11 +134,11 @@
     display: flex;
     gap: 0.3rem;
     font-size: 1.1rem;
-    color: var(--pictonBlue);
+    color: var(--whiteFull);
   }
 
   .name span {
-    color: var(--whiteFull);
+    color: var(--malachite);
   }
 
   .mobile-menu a {
@@ -182,12 +182,7 @@
     font-weight: 700;
   }
 
-  .info {
-    width: 100%;
-  }
-
   .info .title-personal-informations {
-    text-align: center;
     font-size: 1.3rem;
     margin-bottom: 1rem;
   }
@@ -229,7 +224,7 @@
   }
 
   .content-skills .skill h4,
-  .description button span,
+  .description .download-pdf-button span,
   .description p,
   .description span,
   .description-courses .institution,
@@ -238,7 +233,7 @@
     font-size: 0.8rem;
   }
 
-  .description button {
+  .documents-links button {
     height: 3rem;
   }
 
@@ -266,6 +261,8 @@
   .content-skills {
     display: flex;
     gap: 1rem;
+    width: calc(100% - 2rem);
+    margin: 0 auto;
   }
 
   .box h1 {
@@ -277,7 +274,7 @@
   }
 
   .content-skills .skill {
-    width: 6.5rem;
+    width: 6rem;
   }
 
   .content-skills .skill img {
@@ -349,6 +346,8 @@
   .flex-courses .course,
   .flex-experiences .experience,
   .flex-formations .formation {
+    display: flex;
+    align-items: center;
     gap: 1rem;
     width: calc(100vw - 2rem);
   }
@@ -376,6 +375,163 @@
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .desktop-menu a {
+    font-size: 1.1rem;
+  }
+
+  .about-me h1,
+  .container-skills h1,
+  .container-projects h1 {
+    font-size: 1.9rem;
+    font-weight: 600;
+  }
+
+  .main {
+    padding-top: 10rem;
+  }
+
+  .who-i-am {
+    width: calc(100% - 7rem);
+    margin: 0 auto;
+  }
+
+  .who-i-am h2 {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.3rem;
+    width: 50vw;
+  }
+
+  .content-me {
+    display: flex;
+    align-items: center;
+  }
+
+  .content-me img {
+    width: 80%;
+  }
+
+  .content-me img:hover {
+    transform: scale(1.03);
+  }
+
+  .content-informations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .description {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1.5rem auto;
+    width: calc(100% - 10rem);
+    gap: 1rem;
+  }
+
+  .info .title-personal-informations {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .description .informations-1 p,
+  .description .informations-2 p {
+    font-size: 0.9rem;
+  }
+
+  .description .informations-1 span,
+  .description .informations-2 span {
+    font-size: 0.95rem;
+  }
+
+  .documents-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 3rem);
+    margin: 0 auto;
+  }
+
+  .documents-links a {
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  .documents-links .download-pdf-button {
+    height: 3rem;
+    width: 70%;
+  }
+
+  .download-pdf-button span {
+    font-size: 0.9rem;
+  }
+
+  .container-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .box {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    width: 10rem;
+    height: 3rem;
+    margin: 0 auto;
+    padding: 0.8rem;
+  }
+
+  .box p {
+    font-size: 1.05rem;
+  }
+
+  .content-skills {
+    display: flex;
+    gap: 1rem;
+    width: calc(100% - 5rem);
+    margin: 0 auto;
+  }
+
+  .content-skills .skill {
+    width: 6.5rem;
+  }
+
+  .content-skills .skill img {
+    width: 2rem;
+  }
+
+  .container-projects {
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .content-projects {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: calc(100% - 2rem);
+  }
+
+  .content-projects img {
+    width: 100%;
+  }
+
+  .project {
+    width: 40%;
+  }
+}
+
 @media only screen and (min-width: 1024px) {
   .courses-formations .courses h1,
   .courses-formations .experiences h1,
@@ -398,7 +554,6 @@
 
   .menu-navigate {
     gap: 1rem;
-    padding: 1rem;
   }
 
   .title-about {
