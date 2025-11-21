@@ -425,6 +425,16 @@
     gap: 1rem;
   }
 
+  .informations-1,
+  .informations-2 {
+    min-width: 25rem;
+  }
+
+  .informations-1 a button,
+  .informations-2 a button {
+    width: 70%;
+  }
+
   .info .title-personal-informations {
     font-size: 1.25rem;
     margin-bottom: 1rem;
@@ -523,7 +533,7 @@
     grid-template-columns: repeat(2, 1fr);
     width: calc(100% - 3rem);
     margin: 0 auto;
-    gap: 1rem;
+    gap: 2.5rem;
   }
 
   .courses-formations .course,
