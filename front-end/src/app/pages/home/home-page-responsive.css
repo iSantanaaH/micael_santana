@@ -170,10 +170,6 @@
     max-width: 30rem;
   }
 
-  .content-me img:hover {
-    transform: scale(1.025);
-  }
-
   .about-me .title-about,
   .container-skills h1,
   .about-me h1,
@@ -231,15 +227,6 @@
   .description-experience .company,
   .description-formation .university {
     font-size: 0.8rem;
-  }
-
-  .documents-links button {
-    height: 3rem;
-  }
-
-  .documents-links {
-    display: flex;
-    gap: 0.5rem;
   }
 
   .container-boxes {
@@ -303,6 +290,11 @@
     width: 100%;
   }
 
+  .project {
+    min-width: 21.5rem;
+    max-width: 80%;
+  }
+
   .courses-formations .courses,
   .courses-formations .experiences,
   .courses-formations .formations,
@@ -332,7 +324,7 @@
   .courses-formations .courses h1,
   .courses-formations .experiences h1,
   .courses-formations .formations h1 {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
   }
 
   .courses .container-image img,
@@ -382,8 +374,9 @@
 
   .about-me h1,
   .container-skills h1,
-  .container-projects h1 {
-    font-size: 1.9rem;
+  .container-projects h1,
+  .courses-formations h1 {
+    font-size: 1.8rem;
     font-weight: 600;
   }
 
@@ -400,7 +393,7 @@
     text-align: center;
     margin: 0 auto;
     font-size: 1.3rem;
-    width: 50vw;
+    width: 35vw;
   }
 
   .content-me {
@@ -409,11 +402,11 @@
   }
 
   .content-me img {
-    width: 80%;
+    width: 60%;
   }
 
   .content-me img:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
   }
 
   .content-informations {
@@ -447,25 +440,6 @@
     font-size: 0.95rem;
   }
 
-  .documents-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: calc(100% - 3rem);
-    margin: 0 auto;
-  }
-
-  .documents-links a {
-    display: flex;
-    width: 100%;
-    flex-grow: 1;
-  }
-
-  .documents-links .download-pdf-button {
-    height: 3rem;
-    width: 70%;
-  }
-
   .download-pdf-button span {
     font-size: 0.9rem;
   }
@@ -473,7 +447,7 @@
   .container-boxes {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1.3rem;
   }
 
   .box {
@@ -516,7 +490,6 @@
 
   .content-projects {
     display: flex;
-    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
     margin: 0 auto;
@@ -529,6 +502,70 @@
 
   .project {
     width: 40%;
+  }
+
+  .description-courses .institution,
+  .description-experience .company,
+  .description-formation .university,
+  .courses-formations .date-inity {
+    font-size: 0.9rem;
+  }
+
+  .description-courses .title-courses,
+  .description-experience .title-experience,
+  .description-formation .title-formation,
+  .project p {
+    font-size: 1rem;
+  }
+
+  .courses-formations {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: calc(100% - 3rem);
+    margin: 0 auto;
+    gap: 1rem;
+  }
+
+  .courses-formations .course,
+  .courses-formations .formation,
+  .courses-formations .experience {
+    display: flex;
+    align-items: center;
+  }
+
+  .courses-formations .formations {
+    grid-column: 1;
+    width: 100%;
+  }
+  .courses-formations .experiences {
+    grid-column: 2;
+    width: 100%;
+  }
+
+  .courses-formations .courses {
+    grid-column: span 2;
+    margin-top: 4rem;
+  }
+
+  .courses-formations .flex-courses {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .experiences,
+  .formations,
+  .courses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flex-courses .course {
+    max-width: 25rem;
   }
 }
 
@@ -543,8 +580,8 @@
   .about-me h1,
   .container-skills h1,
   .container-projects h1 {
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: 2.3rem;
+    font-weight: 700;
   }
 
   .main {
@@ -575,68 +612,60 @@
   .container-image {
     width: 90vw;
     border-radius: 100%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
   }
 
-  .container-image img:hover {
-    transform: scale(1.1);
+  .content-informations {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .info {
     width: calc(100% - 11rem);
     margin: 3rem auto;
-    height: 40vh;
-  }
-
-  .content-informations {
-    align-items: center;
-    width: 100%;
-    margin: 0 auto;
   }
 
   .info .title-personal-informations {
     font-weight: 500;
-    margin-bottom: 1.2rem;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
 
   .description {
-    width: 38vw;
+    display: flex;
+    align-items: center;
+    width: 100%;
     grid-column: 1;
   }
 
-  .description div {
-    gap: 1rem;
+  .informations-1 button,
+  .informations-2 button {
+    width: 20rem;
   }
 
-  .download-pdf-button {
-    width: 14rem;
-    font-size: 0.9rem;
+  .description div {
+    gap: 0.8rem;
   }
 
   .container-boxes {
-    gap: 1.5rem;
+    display: flex;
     grid-column: 2;
     flex-wrap: wrap;
   }
 
   .box {
     gap: 1rem;
-    width: 25rem;
+    width: 20rem;
+    height: 4rem;
     border-radius: 0.3rem;
   }
 
-  .box h1 {
-    font-size: 3rem;
+  .box h2 {
+    font-size: 2rem;
     padding: 1rem;
   }
 
   .box p {
     font-size: 1.2rem;
-  }
-
-  .container-skills h1 {
-    font-size: 3.2rem;
   }
 
   .content-skills {
@@ -657,10 +686,6 @@
 
   .content-skills .skill img {
     width: 2.5rem;
-  }
-
-  .container-projects h1 {
-    font-size: 3.2rem;
   }
 
   .project h2 {
@@ -690,5 +715,50 @@
   .description-experience .title-experience,
   .description-formation .title-formation {
     font-size: 1.1rem;
+  }
+
+  .courses-formations .experiences,
+  .courses-formations .formations {
+    flex-direction: column;
+    gap: 1.2rem;
+    grid-row: 1;
+    width: 30rem;
+    display: flex;
+  }
+
+  .courses .flex-courses,
+  .experiences .flex-experiences,
+  .formations .flex-formations {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .courses-formations {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 5rem;
+  }
+
+  .courses-formations .formations {
+    justify-self: center;
+    grid-column: 1;
+    justify-self: center;
+  }
+
+  .courses-formations .experiences {
+    grid-column: 2;
+    justify-self: center;
+  }
+
+  .courses-formations .courses {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    grid-column: 1;
+    grid-row: 2;
+    width: 30rem;
+    padding-bottom: 10rem;
   }
 }
