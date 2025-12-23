@@ -37,11 +37,37 @@ section {
   scroll-margin-top: 8rem;
 }
 
+.who-i-am h2 .blue-name,
+.who-i-am h2 .green-name,
 .about-me h1,
+.about-me span,
 .container-skills h1,
 .container-projects h1,
-.courses-formations h1 {
+.courses-formations h1,
+.footer h1,
+.footer span {
   cursor: pointer;
+  transition: all 0.5s ease;
+  text-align: center;
+}
+
+.who-i-am span:hover,
+.about-me h1:hover,
+.footer h1:hover {
+  color: var(--esmerald);
+}
+
+.who-i-am:hover span:not(:hover) {
+  color: var(--pictonBlue);
+}
+
+.about-me h1:hover .green-name,
+.footer h1:hover .green-name {
+  color: var(--pictonBlue);
+}
+
+.name span {
+  color: var(--malachite);
 }
 
 .container-image,
@@ -139,7 +165,6 @@ section {
   border-radius: 0.2rem;
 }
 
-.title-about,
 .title-personal-informations {
   text-align: center;
   color: var(--pictonBlue);
@@ -415,6 +440,24 @@ section {
   margin-bottom: 1rem;
 }
 
-.footer .social-networks img {
-  width: 2rem;
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--black850);
+  min-height: 30rem;
+}
+
+.footer h1 {
+  margin-top: 3rem;
+}
+
+.social-networks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.social-networks img {
+  width: 3rem;
 }
