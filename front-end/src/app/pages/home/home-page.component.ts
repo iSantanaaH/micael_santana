@@ -51,8 +51,8 @@ export default class HomePageComponent {
       icon: 'assets/Images/ui-icons/map.svg',
     },
     {
-      id: 'Redes sociais',
-      label: 'social-networks',
+      id: 'Contato',
+      label: 'contact-me',
       icon: 'assets/Images/ui-icons/radio-tower.svg',
     },
   ];
