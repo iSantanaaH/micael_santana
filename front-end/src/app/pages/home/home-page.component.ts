@@ -50,6 +50,11 @@ export default class HomePageComponent {
       label: 'trajectory',
       icon: 'assets/Images/ui-icons/map.svg',
     },
+    {
+      id: 'Redes sociais',
+      label: 'social-networks',
+      icon: 'assets/Images/ui-icons/radio-tower.svg',
+    },
   ];
 
   isMobileMenuOpen = signal(false);
