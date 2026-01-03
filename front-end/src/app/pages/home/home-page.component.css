@@ -176,7 +176,8 @@ section {
   cursor: pointer;
 }
 
-.description span {
+.description span,
+.credits h3 {
   font-weight: 700;
   color: var(--whiteFull);
 }
@@ -460,4 +461,8 @@ section {
 
 .social-networks img {
   width: 2.5rem;
+}
+
+.credits {
+  margin-top: 4.5rem;
 }
