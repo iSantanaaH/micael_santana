@@ -102,5 +102,6 @@ export default class HomePageComponent {
   changeLanguagePage(lang: string): void {
     if (!lang) return;
     this.translate.use(lang);
+    this.isDropdownLanguageOpen.set(false);
   }
 }
