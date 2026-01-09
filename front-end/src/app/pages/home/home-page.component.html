@@ -33,10 +33,6 @@
   }
 
   <nav class="menu-navigate">
-    @if (isDropdownLanguageOpen()) {
-    <!-- <div class="backdrop" (click)="toggleLanguageDropdown($event)"></div> -->
-    }
-
     <ul class="desktop-menu">
       @for (link of navLinks; track link.id) {
       <li>
@@ -53,21 +49,27 @@
         </div>
       </section>
 
-      <section
-        class="language-selector"
-        title="Mudar idioma"
-        (click)="toggleLanguageDropdown($event)"
-      >
-        <img src="/assets/Images/ui-icons/world-language.svg" alt="" />
-
-        @for (flag of flags; track flag.id) {
-        <div class="show-flag"></div>
-        <p>{{ flag.lang }}</p>
+      <section class="preferences">
         <img
-          src="{{ flag.icon }}"
-          alt=""
-          (click)="changeLanguagePage(flag.lang)"
+          src="/assets/Images/ui-icons/world-language.svg"
+          alt="Mudar idioma"
+          title="Mudar idioma"
+          (click)="toggleLanguageDropdown($event)"
         />
+
+        @if (isDropdownLanguageOpen()) {
+        <!-- <div class="backdrop" (click)="toggleLanguageDropdown($event)"></div> -->
+
+        <nav class="language">
+          <ul>
+            @for (flag of flags; track flag.id) {
+            <li (click)="changeLanguagePage(flag.lang)">
+              <img src="{{ flag.icon }}" alt="" />
+              <p>{{ flag.labelKey | translate }}</p>
+            </li>
+            }
+          </ul>
+        </nav>
 
         }
       </section>
@@ -81,9 +83,9 @@
       <h2>
         {{ "home.i-am" | translate }}
 
-        <span class="blue-name"> {{ "personal.name" | translate }} </span
+        <span class="blue-name"> {{ "personal.values.name" | translate }} </span
         ><span class="green-name">
-          {{ "personal.surname" | translate }}
+          {{ "personal.values.surname" | translate }}
         </span>
         {{ "home.text" | translate }}
       </h2>
