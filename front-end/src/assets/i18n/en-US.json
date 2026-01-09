@@ -1,0 +1,73 @@
+{
+  "menu": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "trajectory": "Trajectory",
+    "contact": "Contact"
+  },
+  "home": {
+    "i-am": "I'm",
+    "text": "faith guides me, technology inspires me, and challenges drive me to envolve every day"
+  },
+  "about-me": {
+    "personal-informations": "Personal Informations"
+  },
+  "personal": {
+    "labels": {
+      "name": "Name",
+      "surname": "Surname",
+      "full-name": "Full Name",
+      "age": "Age",
+      "languages": "Languages",
+      "marital-status": "Marital Status",
+      "whatsapp": "Whatsapp",
+      "degree": "Degree",
+      "e-mail": "Email",
+      "availability": "Availability",
+      "city": "City",
+      "freelance": "Freelance"
+    },
+    "values": {
+      "name": "Micael",
+      "surname": "Santana",
+      "full-name": "Micael Alves Ribeiro de Santana",
+      "languages": "Portuguese and English",
+      "marital-status": "Married",
+      "whatsapp": "(75) 9 9946-8431",
+      "degree-name": "Systems Analysis and Development",
+      "e-mail": "micaelsantana.dev@gmail.com",
+      "availability": "Remote / Hybrid",
+      "city": "Ribeira do Pombal/BA",
+      "freelance": "Available",
+      "resume": "Resume",
+      "degree-certificate": "Degree Certificate"
+    },
+    "boxes": {
+      "certificates": "Certificates",
+      "degree": "Degree",
+      "projects": "Projects",
+      "deploy": "Deploys"
+    },
+    "units": {
+      "years": "years"
+    }
+  },
+  "all-titles": {
+    "about-before": "About",
+    "about-after": "me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "education": "Education",
+    "job-experiences": "Experiences",
+    "courses": "Courses",
+    "talk-to-me-before": "Talk to",
+    "talk-to-me-after": "Me"
+  },
+
+  "language": {
+    "ptBR": "Português",
+    "enUS": "Inglês"
+  }
+}
