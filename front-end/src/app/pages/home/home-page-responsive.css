@@ -589,7 +589,7 @@
     height: 2rem;
   }
 
-  .language-selector {
+  .preferences {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -597,8 +597,34 @@
     position: relative;
   }
 
-  .language-selector img {
+  .preferences img {
     width: 2rem;
+  }
+
+  .language {
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    background: var(--gray750);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: 10rem;
+  }
+
+  .language ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .language li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .language li p {
+    color: var(--whiteFull);
   }
 
   .backdrop {
