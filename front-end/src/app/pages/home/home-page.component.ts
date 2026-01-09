@@ -74,13 +74,13 @@ export default class HomePageComponent {
   flags = [
     {
       id: 1,
-      lang: 'Português',
+      lang: 'pt-BR',
       labelKey: 'language.ptBR',
       icon: 'assets/Images/ui-icons/flag-of-brazil.svg',
     },
     {
       id: 2,
-      lang: 'Inglês',
+      lang: 'en-US',
       labelKey: 'language.enUS',
       icon: 'assets/Images/ui-icons/flag-of-united-states.svg',
     },
@@ -100,6 +100,7 @@ export default class HomePageComponent {
   }
 
   changeLanguagePage(lang: string): void {
+    if (!lang) return;
     this.translate.use(lang);
   }
 }
