@@ -23,7 +23,7 @@
       @for (link of navLinks; track link.id) {
       <li>
         <img [src]="link.icon" alt="ícones" />
-        <a [href]="'#' + link.label" (click)="toggleMobileMenu($event)">{{
+        <a [href]="'#' + link.fragment" (click)="toggleMobileMenu($event)">{{
           link.id
         }}</a>
       </li>
@@ -33,13 +33,45 @@
   }
 
   <nav class="menu-navigate">
+    @if (isDropdownLanguageOpen()) {
+    <!-- <div class="backdrop" (click)="toggleLanguageDropdown($event)"></div> -->
+    }
+
     <ul class="desktop-menu">
       @for (link of navLinks; track link.id) {
       <li>
-        <a [href]="'#' + link.label">{{ link.id }}</a>
+        <a [href]="'#' + link.fragment">{{ link.labelKey | translate }}</a>
       </li>
       }
     </ul>
+
+    <article class="page-mode-menu">
+      <section class="mode-list">
+        <div class="container">
+          <input type="checkbox" name="checkbox" id="checkbox" checked />
+          <label for="checkbox" class="label"> </label>
+        </div>
+      </section>
+
+      <section
+        class="language-selector"
+        title="Mudar idioma"
+        (click)="toggleLanguageDropdown($event)"
+      >
+        <img src="/assets/Images/ui-icons/world-language.svg" alt="" />
+
+        @for (flag of flags; track flag.id) {
+        <div class="show-flag"></div>
+        <p>{{ flag.lang }}</p>
+        <img
+          src="{{ flag.icon }}"
+          alt=""
+          (click)="changeLanguagePage(flag.lang)"
+        />
+
+        }
+      </section>
+    </article>
   </nav>
 </header>
 
@@ -47,10 +79,13 @@
   <section class="who-i-am" id="home">
     <div class="content-me">
       <h2>
-        Sou <span class="first-span blue-name">Micael </span>
-        <span class="second-span green-name">Santana</span>, A fé me guia, a
-        tecnologia me inspira e os desafios me impulsionam a evoluir todos os
-        dias.
+        {{ "home.i-am" | translate }}
+
+        <span class="blue-name"> {{ "personal.name" | translate }} </span
+        ><span class="green-name">
+          {{ "personal.surname" | translate }}
+        </span>
+        {{ "home.text" | translate }}
       </h2>
 
       <figure class="container-image">
@@ -61,21 +96,44 @@
   </section>
 
   <section class="about-me" id="about-me">
-    <h1 class="blue-name">Sobre <span class="green-name"> Mim</span></h1>
+    <h1>
+      <span class="blue-name">
+        {{ "all-titles.about-before" | translate }}
+      </span>
+      <span class="green-name">{{ "all-titles.about-after" | translate }}</span>
+    </h1>
 
     <div class="info">
-      <h2 class="title-personal-informations">Informações Pessoais</h2>
+      <h2 class="title-personal-informations">
+        {{ "about-me.personal-informations" | translate }}
+      </h2>
 
       <div class="content-informations">
         <div class="description">
           <div class="informations-1">
-            <p>Nome: <span>Micael Alves Ribeiro de Santana</span></p>
             <p>
-              Idade: <span>{{ calcMyAge() }} anos</span>
+              {{ "personal.labels.full-name" | translate }}:
+              <span>{{ "personal.values.full-name" | translate }}</span>
             </p>
-            <p>Idiomas: <span>Português e Inglês</span></p>
-            <p>Estado Civil: <span>Casado</span></p>
-            <p>Whatsapp: <span>(75) 99946-8431</span></p>
+            <p>
+              {{ "personal.labels.age" | translate }}:
+              <span
+                >{{ calcMyAge() }}
+                {{ "personal.units.years" | translate }}</span
+              >
+            </p>
+            <p>
+              {{ "personal.labels.languages" | translate }}:
+              <span> {{ "personal.values.languages" | translate }}</span>
+            </p>
+            <p>
+              {{ "personal.labels.marital-status" | translate }}:
+              <span> {{ "personal.values.marital-status" | translate }}</span>
+            </p>
+            <p>
+              {{ "personal.labels.whatsapp" | translate }}:
+              <span> {{ "personal.values.whatsapp" | translate }}</span>
+            </p>
 
             <a
               href="/assets/Documents/curriculo.pdf"
@@ -91,11 +149,26 @@
             </a>
           </div>
           <div class="informations-2">
-            <p>Formação: <span>Análise e Desenvolvimento de Sistemas</span></p>
-            <p>Email: <span>micaelsantana.dev&#64;gmail.com</span></p>
-            <p>Disponibilidade: <span>Remoto / Híbrido</span></p>
-            <p>Cidade: <span>Ribeira do Pombal/BA</span></p>
-            <p>Freelance: <span>Disponível</span></p>
+            <p>
+              {{ "personal.labels.degree" | translate }}:
+              <span> {{ "personal.values.degree-name" | translate }}</span>
+            </p>
+            <p>
+              {{ "personal.labels.e-mail" | translate }}:
+              <span> {{ "personal.values.e-mail" | translate }}</span>
+            </p>
+            <p>
+              {{ "personal.labels.availability" | translate }}:
+              <span> {{ "personal.values.availability" | translate }}</span>
+            </p>
+            <p>
+              {{ "personal.labels.city" | translate }}:
+              <span> {{ "personal.values.city" | translate }}</span>
+            </p>
+            <p>
+              {{ "personal.labels.freelance" | translate }}:
+              <span> {{ "personal.values.freelance" | translate }}</span>
+            </p>
 
             <a
               href="/assets/Documents/diploma.pdf"
@@ -405,7 +478,7 @@
       </div>
 
       } @placeholder {
-      <h1>nada renderizou ainda</h1>
+      <p></p>
       }
     </div>
     <div class="style-border"></div>
@@ -585,6 +658,9 @@
     </a>
   </section>
   <section class="credits">
-    <h3>Micael Santana 2025 &copy;</h3>
+    <h3 class="blue-name">
+      Micael <span class="green-name">Santana</span>
+      <span class="blue-name"> 2025</span> &copy;
+    </h3>
   </section>
 </footer>
