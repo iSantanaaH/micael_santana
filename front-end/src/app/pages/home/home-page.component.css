@@ -67,16 +67,13 @@ section {
   text-align: center;
 }
 
-.who-i-am span:hover,
+.who-i-am .blue-name:hover,
 .about-me h1:hover,
 .footer h1:hover {
   color: var(--esmerald);
 }
 
-.who-i-am:hover span:not(:hover) {
-  color: var(--pictonBlue);
-}
-
+.who-i-am .green-name:hover,
 .about-me h1:hover .green-name,
 .footer h1:hover .green-name {
   color: var(--pictonBlue);
