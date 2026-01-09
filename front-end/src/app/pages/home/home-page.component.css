@@ -29,12 +29,28 @@
   animation: fadeOutScreen 1.5s forwards;
 }
 
+.blue-name {
+  color: var(--pictonBlue);
+}
+
+.green-name {
+  color: var(--esmerald);
+}
+
 ul li {
   list-style: none;
 }
 
 section {
   scroll-margin-top: 8rem;
+}
+
+.page-mode-menu {
+  display: none;
+}
+
+.header {
+  position: relative;
 }
 
 .who-i-am h2 .blue-name,
@@ -93,7 +109,6 @@ section {
   position: fixed;
   width: 100%;
   background: var(--pictonBlue);
-  /* filter: drop-shadow(0.3rem 0.3rem 0.3rem var(--esmerald)); */
   z-index: 100;
 }
 
@@ -108,14 +123,6 @@ section {
   color: var(--whiteFull);
   text-decoration: none;
   font-size: 1.3rem;
-}
-
-.blue-name {
-  color: var(--pictonBlue);
-}
-
-.green-name {
-  color: var(--esmerald);
 }
 
 .main {
@@ -176,8 +183,7 @@ section {
   cursor: pointer;
 }
 
-.description span,
-.credits h3 {
+.description span {
   font-weight: 700;
   color: var(--whiteFull);
 }
@@ -465,4 +471,64 @@ section {
 
 .credits {
   margin-top: 4.5rem;
+}
+
+.label {
+  height: 2rem;
+  width: 4.5rem;
+  background-color: #ffffff;
+  border-radius: 1.875rem;
+  -webkit-box-shadow: inset 0 0 0.313rem 0.25rem rgba(255, 255, 255, 1),
+    inset 0 0 1.25rem 0.1rem rgba(0, 0, 0, 0.488),
+    0.625rem 1.25rem 1.875rem rgba(0, 0, 0, 0.096),
+    inset 0 0 0 0.188rem rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 0.313rem 0.25rem rgba(255, 255, 255, 1),
+    inset 0 0 1.25rem 0.1rem rgba(0, 0, 0, 0.488),
+    0.625rem 1.25rem 1.875rem rgba(0, 0, 0, 0.096),
+    inset 0 0 0 0.188rem rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+}
+
+#checkbox {
+  display: none;
+}
+
+#checkbox:checked ~ .label::before {
+  left: 2.5rem;
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #000000 0%, #414141 70%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.label::before {
+  position: absolute;
+  content: "";
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  background-color: #000000;
+  background-image: linear-gradient(
+    130deg,
+    #757272 10%,
+    #ffffff 11%,
+    #726f6f 62%
+  );
+  left: 0.625rem;
+  -webkit-box-shadow: 0 0.125rem 0.1rem rgba(0, 0, 0, 0.3),
+    0.625rem 0.625rem 0.625rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.125rem 0.1rem rgba(0, 0, 0, 0.3),
+    0.625rem 0.625rem 0.625rem rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
