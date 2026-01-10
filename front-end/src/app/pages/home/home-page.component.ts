@@ -1,11 +1,12 @@
-import { NgOptimizedImage } from '@angular/common';
-import { Component, signal } from '@angular/core';
+import { AsyncPipe, NgOptimizedImage } from '@angular/common';
+import { Component, effect, signal } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { map, Observable, Observer } from 'rxjs';
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [NgOptimizedImage, TranslateModule],
+  imports: [NgOptimizedImage, TranslateModule, AsyncPipe],
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.css', './home-page-responsive.css'],
 })
@@ -89,6 +90,42 @@ export default class HomePageComponent {
   isMobileMenuOpen = signal(false);
   isDropdownLanguageOpen = signal(false);
 
+  private preventScroll = (event: Event) => {
+    event.preventDefault();
+  };
+
+  private preventKeyScroll = (event: KeyboardEvent) => {
+    const keys = [
+      'ArrowUp',
+      'ArrowDown',
+      'ArrowLeft',
+      'ArrowRight',
+      'Space',
+      'PageUp',
+      'PageDown',
+      'Home',
+      'End',
+    ];
+
+    if (keys.includes(event.code)) {
+      event.preventDefault();
+    }
+  };
+
+  private disableScroll(): void {
+    window.addEventListener('wheel', this.preventScroll, { passive: false });
+    window.addEventListener('touchmove', this.preventScroll, {
+      passive: false,
+    });
+    window.addEventListener('keydown', this.preventKeyScroll);
+  }
+
+  private enableScroll(): void {
+    window.removeEventListener('wheel', this.preventScroll);
+    window.removeEventListener('touchmove', this.preventScroll);
+    window.removeEventListener('keydown', this.preventKeyScroll);
+  }
+
   toggleMobileMenu(event: MouseEvent): void {
     event.stopPropagation();
     this.isMobileMenuOpen.update((isOpen) => !isOpen);
@@ -96,12 +133,27 @@ export default class HomePageComponent {
 
   toggleLanguageDropdown(event: MouseEvent): void {
     event.stopPropagation();
-    this.isDropdownLanguageOpen.update((isOpen) => !isOpen);
+    this.isDropdownLanguageOpen.update((isOpen) => {
+      const next = !isOpen;
+
+      next ? this.disableScroll() : this.enableScroll();
+
+      return next;
+    });
   }
 
   changeLanguagePage(lang: string): void {
     if (!lang) return;
     this.translate.use(lang);
     this.isDropdownLanguageOpen.set(false);
+    this.enableScroll();
   }
+
+  resumeSrc$ = this.translate.onLangChange.pipe(
+    map((event) =>
+      event.lang === 'pt-BR'
+        ? '/assets/Documents/curriculo.pdf'
+        : '/assets/Documents/resume.pdf'
+    )
+  );
 }
