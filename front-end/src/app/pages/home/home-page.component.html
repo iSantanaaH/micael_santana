@@ -1,12 +1,35 @@
 <header class="header">
+  <!-- Menu mobile -->
+
   <nav class="mobile-header">
     <article>
-      <div class="menu-icon-desktop" id="menu-icon">
+      <div class="menu-icon-mobile" id="menu-icon">
         <button class="icon-burguer" (click)="toggleMobileMenu($event)">
           ☰
         </button>
         <p class="name">Micael <span>Santana</span></p>
       </div>
+      <img
+        src="/assets/Images/ui-icons/world-language.svg"
+        alt="Mudar idioma"
+        class="iconLanguageMobile"
+        (click)="toggleLanguageDropdown($event)"
+      />
+
+      @if (this.isDropdownLanguageOpen()) {
+      <div class="backdrop" (click)="toggleLanguageDropdown($event)"></div>
+
+      <nav class="language-selector-mobile">
+        <ul>
+          @for (flag of flags; track flag.id ) {
+          <li (click)="changeLanguagePage(flag.lang)">
+            <img [src]="flag.icon" [alt]="flag.labelKey" />
+            <p>{{ flag.labelKey | translate }}</p>
+          </li>
+          }
+        </ul>
+      </nav>
+      }
     </article>
   </nav>
 
@@ -24,7 +47,7 @@
       <li>
         <img [src]="link.icon" alt="ícones" />
         <a [href]="'#' + link.fragment" (click)="toggleMobileMenu($event)">{{
-          link.id
+          link.labelKey | translate
         }}</a>
       </li>
       }
@@ -32,6 +55,7 @@
   </nav>
   }
 
+  <!-- Menu desktop -->
   <nav class="menu-navigate">
     <ul class="desktop-menu">
       @for (link of navLinks; track link.id) {
@@ -103,7 +127,7 @@
     <div class="style-border"></div>
   </section>
 
-  <section class="about-me" id="about-me">
+  <section class="about-me" id="about">
     <h1>
       <span class="blue-name">
         {{ "all-titles.about-before" | translate }}
@@ -700,7 +724,7 @@
 </main>
 
 <footer class="footer">
-  <section class="cotact-me" id="contact-me">
+  <section class="cotact-me" id="contact">
     <h1 class="blue-name">Fale <span class="green-name">comigo</span></h1>
   </section>
 
