@@ -42,9 +42,15 @@
     </ul>
 
     <article class="page-mode-menu">
-      <section class="mode-list">
+      <section class="mode-list" aria-disabled="true">
         <div class="container">
-          <input type="checkbox" name="checkbox" id="checkbox" checked />
+          <input
+            type="checkbox"
+            name="checkbox"
+            id="checkbox"
+            checked
+            disabled
+          />
           <label for="checkbox" class="label"> </label>
         </div>
       </section>
@@ -138,12 +144,12 @@
             </p>
 
             <a
-              href="/assets/Documents/curriculo.pdf"
+              [href]="resumeSrc$ | async"
               class="curriculum-link"
               download="curriculo.pdf"
             >
               <button class="download-pdf-button">
-                <span>Currículo</span>
+                <span>{{ "personal.values.resume" | translate }}</span>
                 <div>
                   <img src="/assets/Images/ui-icons/download.svg" alt="" />
                 </div>
@@ -178,32 +184,32 @@
               download="diploma.pdf"
             >
               <button class="download-pdf-button">
-                <span>Diploma</span>
+                <span>{{
+                  "personal.values.degree-certificate" | translate
+                }}</span>
                 <div>
                   <img src="/assets/Images/ui-icons/download.svg" alt="" />
                 </div>
               </button>
             </a>
           </div>
-
-          <section class="documents-links"></section>
         </div>
         <div class="container-boxes">
           <div class="box">
             <h2>10</h2>
-            <p>Certificados</p>
+            <p>{{ "personal.boxes.certificates" | translate }}</p>
           </div>
           <div class="box">
             <h2>1</h2>
-            <p>Graduação</p>
+            <p>{{ "personal.boxes.degree" | translate }}</p>
           </div>
           <div class="box">
             <h2>7</h2>
-            <p>Projetos</p>
+            <p>{{ "personal.boxes.projects" | translate }}</p>
           </div>
           <div class="box">
             <h2>7</h2>
-            <p>Deploys</p>
+            <p>{{ "personal.boxes.deploy" | translate }}</p>
           </div>
         </div>
       </div>
@@ -212,7 +218,7 @@
   </section>
 
   <section class="container-skills" id="skills">
-    <h1>Habilidades</h1>
+    <h1>{{ "all-titles.skills" | translate }}</h1>
     @defer (on viewport) {
     <div class="content-skills" animate.enter="enter-in-screen-animation">
       <div class="skill">
@@ -343,7 +349,7 @@
   </section>
 
   <section class="container-projects" id="projects">
-    <h1>Projetos</h1>
+    <h1>{{ "all-titles.projects" | translate }}</h1>
     <div class="content-projects">
       @defer (on viewport) {
       <div class="project" animate.enter="enter-in-screen-animation">
@@ -361,10 +367,13 @@
           />
         </a>
         <p class="created">
-          Criado em: <span class="date">Agosto, 30 2022</span>
+          {{ "projects.labels.created-at" | translate }}:
+          <span class="date">{{
+            "projects.inverted-world.created-at" | translate
+          }}</span>
         </p>
-        <h2>Mundo Invertido</h2>
-        <p>Desafio Semana Front-end DIO, feito com HTML, CSS e Javascript</p>
+        <h2>{{ "projects.inverted-world.title" | translate }}</h2>
+        <p>{{ "projects.inverted-world.description" | translate }}</p>
       </div>
       <div class="project" animate.enter="enter-in-screen-animation">
         <a
@@ -381,12 +390,14 @@
           />
         </a>
         <p class="created">
-          Criado em: <span class="date">Junho, 7 2023</span>
+          {{ "projects.labels.created-at" | translate }}:
+          <span class="date">{{
+            "projects.copy-nubank.created-at" | translate
+          }}</span>
         </p>
-        <h2>Nubank Site</h2>
+        <h2>{{ "projects.copy-nubank.title" | translate }}</h2>
         <p>
-          Cópia do Nubank Oficial feita por mim com HTML e CSS a fim aprendizado
-          pessoal.
+          {{ "projects.copy-nubank.description" | translate }}
         </p>
       </div>
       <div class="project" animate.enter="enter-in-screen-animation">
@@ -404,10 +415,13 @@
           />
         </a>
         <p class="created">
-          Criado em: <span class="date">Novembro, 27 2023</span>
+          {{ "projects.labels.created-at" | translate }}:
+          <span class="date">{{
+            "projects.star-guide.created-at" | translate
+          }}</span>
         </p>
-        <h2>Estrela Guia</h2>
-        <p>Blog de um freelance feito com NextJS, PostgreSQL e NodeJS.</p>
+        <h2>{{ "projects.star-guide.title" | translate }}</h2>
+        <p>{{ "projects.star-guide.description" | translate }}</p>
       </div>
 
       <div class="project" animate.enter="enter-in-screen-animation">
@@ -425,10 +439,13 @@
           />
         </a>
         <p class="created">
-          Criado em: <span class="date">Abril, 8 2023</span>
+          {{ "projects.labels.created-at" | translate }}:
+          <span class="date">{{
+            "projects.mr-law.created-at" | translate
+          }}</span>
         </p>
-        <h2>Senhor da Lei</h2>
-        <p>Site desenvolvido com HTML e CSS usando o efeito Parallax.</p>
+        <h2>{{ "projects.mr-law.title" | translate }}</h2>
+        <p>{{ "projects.mr-law.description" | translate }}</p>
       </div>
 
       <div class="project" animate.enter="enter-in-screen-animation">
@@ -446,12 +463,14 @@
           />
         </a>
         <p class="created">
-          Criado em: <span class="date">Maio, 22 2023</span>
+          {{ "projects.labels.created-at" | translate }}:
+          <span class="date">{{
+            "projects.happy-snacks.created-at" | translate
+          }}</span>
         </p>
-        <h2>Happy Lanches</h2>
+        <h2>{{ "projects.happy-snacks.title" | translate }}</h2>
         <p>
-          Landing page de uma lanchonete feita com HTML e CSS com intuíto de
-          aprimorar meus conhecimentos em cards
+          {{ "projects.happy-snacks.description" | translate }}
         </p>
       </div>
 
@@ -470,12 +489,14 @@
           />
         </a>
         <p class="created">
-          Criado em: <span class="date">Setembro, 11 2023</span>
+          {{ "projects.labels.created-at" | translate }}:
+          <span class="date">{{
+            "projects.calculator-imc.created-at" | translate
+          }}</span>
         </p>
-        <h2>Calculadora de IMC</h2>
+        <h2>{{ "projects.calculator-imc.title" | translate }}</h2>
         <p>
-          Calculadora de IMC feito com React e Node. O intuíto do projeto foi
-          aprimorar minhas habilidades em comunição do front-end com o back-end
+          {{ "projects.calculator-imc.description" | translate }}
         </p>
       </div>
 
@@ -489,7 +510,7 @@
   <section class="courses-formations" id="trajectory">
     @defer (on viewport) {
     <div class="formations" animate.enter="enter-in-screen-animation">
-      <h1>Formações</h1>
+      <h1>{{ "all-titles.education" | translate }}</h1>
       <div class="flex-formations">
         <div class="formation">
           <div class="container-image">
@@ -500,17 +521,18 @@
             />
           </div>
           <div class="description-formation">
-            <p class="date-inity">16/02/2022 - 25/05/2024</p>
+            <p class="date-inity">{{ "career.degree.date" | translate }}</p>
             <h2 class="title-formation">
-              Análise e Desenvolvimento de Sistemas
+              {{ "career.degree.degree-name" | translate }}
             </h2>
-            <p class="university">Universidade Norte do Paraná (UNOPAR)</p>
+            <p class="university">{{ "career.degree.faculty" | translate }}</p>
           </div>
         </div>
       </div>
     </div>
+
     <div class="experiences" animate.enter="enter-in-screen-animation">
-      <h1>Experiências</h1>
+      <h1>{{ "all-titles.job-experiences" | translate }}</h1>
       <div class="flex-experiences">
         <div class="experience">
           <div class="container-image">
@@ -521,15 +543,22 @@
             />
           </div>
           <div class="description-experience">
-            <p class="date-inity">21/08/2021 - 09/04/2022</p>
-            <h2 class="title-experience">Estágio Desenvolvedor Web Angular</h2>
-            <p class="company">Kinyx Tecnologia</p>
+            <p class="date-inity">
+              {{ "career.experiences.date" | translate }}
+            </p>
+            <h2 class="title-experience">
+              {{ "career.experiences.function" | translate }}
+            </h2>
+            <p class="company">
+              {{ "career.experiences.enterprise" | translate }}
+            </p>
           </div>
         </div>
       </div>
     </div>
+
     <div class="courses" animate.enter="enter-in-screen-animation">
-      <h1>Cursos</h1>
+      <h1>{{ "all-titles.courses" | translate }}</h1>
       <div class="flex-courses">
         <div class="course">
           <div class="container-image">
@@ -540,11 +569,19 @@
             />
           </div>
           <div class="description-courses">
-            <p class="date-inity">Concluído</p>
-            <h2 class="title-courses">Curso de Angular 2 (v17+)</h2>
-            <p class="institution">Udemy - Dener Troquatte</p>
+            <p class="date-inity">
+              {{ "career.courses.angular.date" | translate }}
+            </p>
+            <h2 class="title-courses">
+              {{ "career.courses.angular.name" | translate }}
+            </h2>
+            <p class="institution">
+              {{ "career.courses.angular.platform" | translate }} -
+              {{ "career.courses.angular.teacher" | translate }}
+            </p>
           </div>
         </div>
+
         <div class="course">
           <div class="container-image">
             <img
@@ -554,11 +591,19 @@
             />
           </div>
           <div class="description-courses">
-            <p class="date-inity">Concluído</p>
-            <h2 class="title-courses">Typescript do básico ao avançado</h2>
-            <p class="institution">Udemy - Matheus Battisti</p>
+            <p class="date-inity">
+              {{ "career.courses.typescript.date" | translate }}
+            </p>
+            <h2 class="title-courses">
+              {{ "career.courses.typescript.name" | translate }}
+            </h2>
+            <p class="institution">
+              {{ "career.courses.typescript.platform" | translate }} -
+              {{ "career.courses.typescript.teacher" | translate }}
+            </p>
           </div>
         </div>
+
         <div class="course">
           <div class="container-image">
             <img
@@ -568,11 +613,19 @@
             />
           </div>
           <div class="description-courses">
-            <p class="date-inity">Concluído</p>
-            <h2 class="title-courses">Node.js do Zero a Maestria</h2>
-            <p class="institution">Udemy</p>
+            <p class="date-inity">
+              {{ "career.courses.node.date" | translate }}
+            </p>
+            <h2 class="title-courses">
+              {{ "career.courses.node.name" | translate }}
+            </h2>
+            <p class="institution">
+              {{ "career.courses.node.platform" | translate }} -
+              {{ "career.courses.node.teacher" | translate }}
+            </p>
           </div>
         </div>
+
         <div class="course">
           <div class="container-image">
             <img
@@ -582,11 +635,19 @@
             />
           </div>
           <div class="description-courses">
-            <p class="date-inity">Concluído</p>
-            <h2 class="title-courses">Design de banco de dados</h2>
-            <p class="institution">Udemy - Matheus Battisti</p>
+            <p class="date-inity">
+              {{ "career.courses.design-database.date" | translate }}
+            </p>
+            <h2 class="title-courses">
+              {{ "career.courses.design-database.name" | translate }}
+            </h2>
+            <p class="institution">
+              {{ "career.courses.design-database.platform" | translate }} -
+              {{ "career.courses.design-database.teacher" | translate }}
+            </p>
           </div>
         </div>
+
         <div class="course">
           <div class="container-image">
             <img
@@ -596,11 +657,19 @@
             />
           </div>
           <div class="description-courses">
-            <p class="date-inity">Concluído</p>
-            <h2 class="title-courses">PHP do Zero a Maestria</h2>
-            <p class="institution">Udemy - Matheus Battisti</p>
+            <p class="date-inity">
+              {{ "career.courses.php.date" | translate }}
+            </p>
+            <h2 class="title-courses">
+              {{ "career.courses.php.name" | translate }}
+            </h2>
+            <p class="institution">
+              {{ "career.courses.php.platform" | translate }} -
+              {{ "career.courses.php.teacher" | translate }}
+            </p>
           </div>
         </div>
+
         <div class="course">
           <div class="container-image">
             <img
@@ -610,9 +679,16 @@
             />
           </div>
           <div class="description-courses">
-            <p class="date-inity">Concluído</p>
-            <h2 class="title-courses">SQL do básico ao avançado</h2>
-            <p class="institution">Udemy - Matheus Battisti</p>
+            <p class="date-inity">
+              {{ "career.courses.sql.date" | translate }}
+            </p>
+            <h2 class="title-courses">
+              {{ "career.courses.sql.name" | translate }}
+            </h2>
+            <p class="institution">
+              {{ "career.courses.sql.platform" | translate }} -
+              {{ "career.courses.sql.teacher" | translate }}
+            </p>
           </div>
         </div>
       </div>
