@@ -7,6 +7,17 @@
     "trajectory": "Trajetória",
     "contact": "Contato"
   },
+  "all-titles": {
+    "about-before": "Sobre",
+    "about-after": "Mim",
+    "skills": "Habilidades",
+    "projects": "Projetos",
+    "education": "Formações",
+    "job-experiences": "Experiências",
+    "courses": "Cursos",
+    "talk-to-me-before": "Fale",
+    "talk-to-me-after": "Comigo"
+  },
   "home": {
     "i-am": "Sou",
     "text": "a fé me guia, a tecnologia me inspira e os desafios me impulsionam a evoluir todos os dias."
@@ -54,16 +65,90 @@
       "years": "anos"
     }
   },
-  "all-titles": {
-    "about-before": "Sobre",
-    "about-after": "Mim",
-    "skills": "Habilidades",
-    "projects": "Projetos",
-    "education": "Formações",
-    "job-experiences": "Experiências",
-    "courses": "Cursos",
-    "talk-to-me-before": "Fale",
-    "talk-to-me-after": "Comigo"
+  "projects": {
+    "inverted-world": {
+      "created-at": "Agosto, 30 2022",
+      "title": "Mundo Invertido",
+      "description": "Desafio Semana Front-end DIO, feito com HTML, CSS e Javascript"
+    },
+    "copy-nubank": {
+      "created-at": "Junho, 7 2023",
+      "title": "Nubank Site",
+      "description": "Cópia do Nubank Oficial feita por mim com HTML e CSS a fim aprendizado pessoal"
+    },
+    "star-guide": {
+      "created-at": "Novembro, 27 2023",
+      "title": "Estrela Guia",
+      "description": "Blog de um freelance feito com NextJS, PostgreSQL e NodeJS"
+    },
+    "mr-law": {
+      "created-at": "Abril, 8 2023",
+      "title": "Senhor da Lei",
+      "description": "Site desenvolvido com HTML e CSS usando o efeito Parallax"
+    },
+    "happy-snacks": {
+      "created-at": "Maio, 22 2023",
+      "title": "Happy Lanches",
+      "description": "Landing page de uma lanchonete feita com HTML e CSS com intuíto de aprimorar meus conhecimentos em cards"
+    },
+    "calculator-imc": {
+      "created-at": "Setembro, 11 2023",
+      "title": "Calculadora de IMC",
+      "description": "Calculadora de IMC feito com React e Node. O intuíto do projeto foi aprimorar minhas habilidades em comunição do front-end com o back-end"
+    },
+    "labels": {
+      "created-at": "Criado em"
+    }
+  },
+  "career": {
+    "degree": {
+      "date": "16/02/2022 - 25/05/2024",
+      "degree-name": "Análise e Desenvolvimento de Sistemas",
+      "faculty": "Universidade Norte do Paraná (UNOPAR)"
+    },
+    "experiences": {
+      "date": "21/08/2021 - 09/04/2022",
+      "function": "Desenvolvedor Web Angular",
+      "enterprise": "Kinyx Tecnologia"
+    },
+    "courses": {
+      "angular": {
+        "date": "Concluído",
+        "name": "Curso de Angular 2 (v17+)",
+        "platform": "Udemy",
+        "teacher": "Dener Troquatte"
+      },
+      "typescript": {
+        "date": "Concluído",
+        "name": "Typescript do básico ao avançado",
+        "platform": "Udemy",
+        "teacher": "Matheus Battisti"
+      },
+      "node": {
+        "date": "Concluído",
+        "name": "Node.js do Zero a Maestria",
+        "platform": "Udemy",
+        "teacher": "Matheus Battisti"
+      },
+      "design-database": {
+        "date": "Concluído",
+        "name": "Design de banco de dados",
+        "platform": "Udemy",
+        "teacher": "Matheus Battisti"
+      },
+      "php": {
+        "date": "Concluído",
+        "name": "PHP do Zero a Maestria",
+        "platform": "Udemy",
+        "teacher": "Matheus Battisti"
+      },
+      "sql": {
+        "date": "Concluído",
+        "name": "SQL do básico ao avançado",
+        "platform": "Udemy",
+        "teacher": "Matheus Battisti"
+      }
+    }
   },
 
   "language": {

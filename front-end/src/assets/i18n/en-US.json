@@ -7,6 +7,17 @@
     "trajectory": "Trajectory",
     "contact": "Contact"
   },
+  "all-titles": {
+    "about-before": "About",
+    "about-after": "me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "education": "Education",
+    "job-experiences": "Experiences",
+    "courses": "Courses",
+    "talk-to-me-before": "Talk to",
+    "talk-to-me-after": "Me"
+  },
   "home": {
     "i-am": "I'm",
     "text": "faith guides me, technology inspires me, and challenges drive me to envolve every day"
@@ -54,16 +65,90 @@
       "years": "years"
     }
   },
-  "all-titles": {
-    "about-before": "About",
-    "about-after": "me",
-    "skills": "Skills",
-    "projects": "Projects",
-    "education": "Education",
-    "job-experiences": "Experiences",
-    "courses": "Courses",
-    "talk-to-me-before": "Talk to",
-    "talk-to-me-after": "Me"
+  "projects": {
+    "inverted-world": {
+      "created-at": "August, 30 2022",
+      "title": "Upside-down world",
+      "description": "DIO Front-end Week Challenge, created using HTML, CSS, and Javascript."
+    },
+    "copy-nubank": {
+      "created-at": "June, 7 2023",
+      "title": "Copy Nubank OFC",
+      "description": "Copy of the official Nubank website, made by me using HTML and CSS for personal learning purposes."
+    },
+    "star-guide": {
+      "created-at": "November, 27 2023",
+      "title": "Star Guide",
+      "description": "A simple blog by a freelancer, built with NextJS, PostgreSQL, and NodeJS."
+    },
+    "mr-law": {
+      "created-at": "April, 8 2023",
+      "title": "Lord of the Law",
+      "description": "Website developed with HTML and CSS using the Parallax effect."
+    },
+    "happy-snacks": {
+      "created-at": "May, 22 2023",
+      "title": "Happy Snacks",
+      "description": "Landing page for a snack bar made with HTML and CSS with the intention of improving my knowledge of cards."
+    },
+    "calculator-imc": {
+      "created-at": "September, 11 2023",
+      "title": "BMI Calculator",
+      "description": "BMI calculator made with React and Node. The project's goal was to improve my front-end/back-end communication skills."
+    },
+    "labels": {
+      "created-at": "Created In"
+    }
+  },
+  "career": {
+    "degree": {
+      "date": "16/02/2022 - 25/05/2024",
+      "degree-name": "Systems Analysis and Development",
+      "faculty": "North Paraná University (UNOPAR)"
+    },
+    "experiences": {
+      "date": "21/08/2021 - 09/04/2022",
+      "function": "Angular Web Developer",
+      "enterprise": "Kinyx Tecnologia"
+    },
+    "courses": {
+      "angular": {
+        "date": "Completed",
+        "name": "Angular 2 Course (v17+)",
+        "platform": "Udemy",
+        "teacher": "Dener Troquatte"
+      },
+      "typescript": {
+        "date": "Completed",
+        "name": "TypeScript from basic to advanced",
+        "platform": "Udemy",
+        "teacher": "Matheus Battisti"
+      },
+      "node": {
+        "date": "Completed",
+        "name": "Node.js from Zero to Mastery",
+        "platform": "Udemy",
+        "teacher": "Matheus Battisti"
+      },
+      "design-database": {
+        "date": "Completed",
+        "name": "Database design",
+        "platform": "Udemy",
+        "teacher": "Matheus Battisti"
+      },
+      "php": {
+        "date": "Completed",
+        "name": "PHP from Zero to Mastery",
+        "platform": "Udemy",
+        "teacher": "Matheus Battisti"
+      },
+      "sql": {
+        "date": "Completed",
+        "name": "SQL from basic to advanced",
+        "platform": "Udemy",
+        "teacher": "Matheus Battisti"
+      }
+    }
   },
 
   "language": {
